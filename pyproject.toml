@@ -1,0 +1,16 @@
+[project]
+name = "lexsi-ai-safety"
+version = "0.1.0"
+description = "Lexsi AI Safety Hackathon, track 2b (Repairing safety drift without retraining): measuring Korean safety drift from fine-tuning Tiny Aya Global, and testing a weight-space repair (SafeTune ReSta) with pre-specified capability gates"
+requires-python = "==3.12.*"
+dependencies = [
+    "accelerate==1.15.0",
+    "auditkit==1.1.7",
+    "curatorkit==0.1.24",
+    "datasets==5.2.0",
+    "huggingface-hub==2.4.0",
+    "peft==0.21.2",
+    "safetune==0.1.14",
+    "torch==2.15.0",
+    "transformers==5.22.2",
+]

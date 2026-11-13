@@ -1,0 +1,191 @@
+{
+ "gamma0.5": {
+  "n_target": 143,
+  "max_identical_response_count": 1,
+  "label_x_lang": {
+   "경고·방향전환": {
+    "ko": 53
+   },
+   "진짜 거절": {
+    "ko": 73
+   },
+   "우회 답변": {
+    "ko": 3
+   },
+   "깨진 출력": {
+    "ko": 6
+   },
+   "거절 아님(무해 답변)": {
+    "ko": 8
+   }
+  },
+  "shape_by_label": {
+   "경고·방향전환": {
+    "n": 53,
+    "median_chars": 169,
+    "median_hangul_frac": 0.729,
+    "median_repeat8": 0.101,
+    "truncated": 8,
+    "dup_responses": 0
+   },
+   "진짜 거절": {
+    "n": 73,
+    "median_chars": 163,
+    "median_hangul_frac": 0.727,
+    "median_repeat8": 0.096,
+    "truncated": 5,
+    "dup_responses": 0
+   },
+   "우회 답변": {
+    "n": 3,
+    "median_chars": 285,
+    "median_hangul_frac": 0.726,
+    "median_repeat8": 0.055,
+    "truncated": 2,
+    "dup_responses": 0
+   },
+   "깨진 출력": {
+    "n": 6,
+    "median_chars": 296.5,
+    "median_hangul_frac": 0.739,
+    "median_repeat8": 0.152,
+    "truncated": 6,
+    "dup_responses": 0
+   },
+   "거절 아님(무해 답변)": {
+    "n": 8,
+    "median_chars": 179.0,
+    "median_hangul_frac": 0.72,
+    "median_repeat8": 0.08,
+    "truncated": 1,
+    "dup_responses": 0
+   }
+  }
+ },
+ "gamma1.0": {
+  "n_target": 232,
+  "max_identical_response_count": 1,
+  "label_x_lang": {
+   "진짜 거절": {
+    "ko": 149
+   },
+   "경고·방향전환": {
+    "ko": 69
+   },
+   "거절 아님(무해 답변)": {
+    "ko": 11
+   },
+   "깨진 출력": {
+    "ko": 1
+   },
+   "우회 답변": {
+    "ko": 1
+   },
+   "빈말": {
+    "ko": 1
+   }
+  },
+  "shape_by_label": {
+   "진짜 거절": {
+    "n": 149,
+    "median_chars": 159,
+    "median_hangul_frac": 0.731,
+    "median_repeat8": 0.07,
+    "truncated": 11,
+    "dup_responses": 0
+   },
+   "경고·방향전환": {
+    "n": 69,
+    "median_chars": 178,
+    "median_hangul_frac": 0.729,
+    "median_repeat8": 0.071,
+    "truncated": 9,
+    "dup_responses": 0
+   },
+   "거절 아님(무해 답변)": {
+    "n": 11,
+    "median_chars": 167,
+    "median_hangul_frac": 0.72,
+    "median_repeat8": 0.056,
+    "truncated": 1,
+    "dup_responses": 0
+   },
+   "깨진 출력": {
+    "n": 1,
+    "median_chars": 224,
+    "median_hangul_frac": 0.643,
+    "median_repeat8": 0.571,
+    "truncated": 1,
+    "dup_responses": 0
+   },
+   "우회 답변": {
+    "n": 1,
+    "median_chars": 318,
+    "median_hangul_frac": 0.717,
+    "median_repeat8": 0.075,
+    "truncated": 1,
+    "dup_responses": 0
+   },
+   "빈말": {
+    "n": 1,
+    "median_chars": 144,
+    "median_hangul_frac": 0.715,
+    "median_repeat8": 0.056,
+    "truncated": 0,
+    "dup_responses": 0
+   }
+  }
+ },
+ "xstest_gamma1.0": {
+  "n_target": 45,
+  "max_identical_response_count": 1,
+  "label_x_lang": {
+   "진짜 거절": {
+    "en": 36
+   },
+   "경고·방향전환": {
+    "en": 4
+   },
+   "우회 답변": {
+    "en": 4
+   },
+   "거절 아님(무해 답변)": {
+    "en": 1
+   }
+  },
+  "shape_by_label": {
+   "진짜 거절": {
+    "n": 36,
+    "median_chars": 287.5,
+    "median_hangul_frac": 0.0,
+    "median_repeat8": 0.045,
+    "truncated": 0,
+    "dup_responses": 0
+   },
+   "경고·방향전환": {
+    "n": 4,
+    "median_chars": 417.5,
+    "median_hangul_frac": 0.0,
+    "median_repeat8": 0.058,
+    "truncated": 1,
+    "dup_responses": 0
+   },
+   "우회 답변": {
+    "n": 4,
+    "median_chars": 398.5,
+    "median_hangul_frac": 0.0,
+    "median_repeat8": 0.05,
+    "truncated": 1,
+    "dup_responses": 0
+   },
+   "거절 아님(무해 답변)": {
+    "n": 1,
+    "median_chars": 306,
+    "median_hangul_frac": 0.0,
+    "median_repeat8": 0.052,
+    "truncated": 0,
+    "dup_responses": 0
+   }
+  }
+ }
+}

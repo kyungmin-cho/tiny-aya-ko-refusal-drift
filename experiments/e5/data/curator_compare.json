@@ -1,0 +1,655 @@
+{
+ "_note": "CuratorKIT 재정제 결과와 기존 정제(D_controls.clean, 107행 교체) 비교. id만 담는다(글 없음)",
+ "created_by": "experiments/e5/scripts/e5_curate.py",
+ "created_kst": "2026-11-12T16:41:56+09:00",
+ "versions": {
+  "curatorkit": "0.1.24",
+  "detect_secrets": "1.5.0"
+ },
+ "curatorkit_config": {
+  "schema_gate": true,
+  "min_tokens": 1,
+  "max_tokens": 1000000000,
+  "dedup": "minhash",
+  "minhash_threshold": 0.85,
+  "minhash_ngram": 3,
+  "minhash_num_perm": 128,
+  "minhash_seed": 42,
+  "clean": false,
+  "secrets_gate": true,
+  "pii_pseudonymize": false,
+  "toxicity_gate": false,
+  "export_formats": [
+   "messages"
+  ],
+  "write_hf_readme": false,
+  "format": "alpaca"
+ },
+ "curatorkit_pipeline": "Curator(CuratorConfig(...)).run(): JSONLReader(format=alpaca) → SchemaGate → ExactDeduplicator → MinHashDeduplicator → SecretsGate → MessagesExporter",
+ "not_used": {
+  "PIIPseudonymizer": "쓰지 않음. Presidio NER 모델(spaCy en_core_web_lg 또는 stanza·transformers 모델 가중치)이 필요하다. spaCy 모델은 PyPI·HF 리비전 고정 경로가 아니고 모델 가중치를 맥에 받지 않는다는 제약에 걸린다. 한국어 spaCy 기본 NER 모델 설정도 없다. 또 이 단계는 PII를 가짜 값으로 바꿔 글을 고치는 정규화기라 행 통과/탈락 규칙과 맞지 않는다",
+  "ToxicityGate": "쓰지 않음. Detoxify 분류기 가중치가 필요하다(curatorkit[hygiene] 미설치, 모델 가중치를 맥에 받지 않는다는 제약). Detoxify 'unbiased'·'original'은 영어 모델이다(curatorkit hygiene/toxicity.py 문서). 한국어 유해성은 기존 규칙(A 판독 '애매', 2차 위험 키워드)으로 대신한다",
+  "TextCleaner": "통과/탈락에는 쓰지 않음(clean=False). 글을 고치는 단계라 원문 유지·E4 비교·포드 재생성(sha256)을 깨기 때문. 고쳤다면 몇 행이 바뀌었을지는 diagnostics에 있다",
+  "EmbeddingDeduplicator_DiversityGate": "쓰지 않음. sentence-transformers 임베딩 모델 가중치가 필요하다",
+  "LLM_gates": "쓰지 않음(HallucinationGate·RewardGate·생성). 외부 LLM API가 필요하다"
+ },
+ "gates": {
+  "k3000_prefix_is_k2400": true,
+  "k2400_prefix_is_k2000": true,
+  "ambig_count": 9,
+  "regression_clean2000_equals_e4": true,
+  "new_clean_within_k2400": true,
+  "pool_after_F": 133112,
+  "pool_equals_d1": true,
+  "regression_c100_slot_equals_e4": true,
+  "regression_match_log_equals_d1": true
+ },
+ "cand3000": {
+  "rows": 3000,
+  "passed": 2949,
+  "rejected": 51,
+  "stage_counts": {
+   "JSONLReader": {
+    "output_count": 3000,
+    "rejected_count": 0
+   },
+   "SchemaGate": {
+    "input_count": 3000,
+    "output_count": 2975,
+    "probe_recovered": 0,
+    "rejected_count": 25
+   },
+   "ExactDeduplicator": {
+    "input_count": 2975,
+    "output_count": 2965
+   },
+   "MinHashDeduplicator": {
+    "input_count": 2965,
+    "output_count": 2963
+   },
+   "SecretsGate": {
+    "input_count": 2963,
+    "output_count": 2949,
+    "probe_recovered": 0,
+    "rejected_count": 14
+   },
+   "MessagesExporter": {
+    "exported_count": 2949
+   }
+  },
+  "rejected_by_step": {
+   "SchemaGate": 25,
+   "SecretsGate": 14,
+   "ExactDeduplicator": 10,
+   "MinHashDeduplicator": 2
+  },
+  "rejected_by_reason": {
+   "missing_field": 25,
+   "secret_detected": 14,
+   "exact_duplicate_of": 10,
+   "near_duplicate(jaccard>=0.85)": 2
+  },
+  "rejected_within_first2400": 41,
+  "export_text_equals_raw": true,
+  "sec": 122.5,
+  "curator_manifest": "experiments/e5/data/curator_work/kullm_cand3000/out/manifest.json"
+ },
+ "original2000_three_way": {
+  "base": "원래 추출 2,000행(Random(20261111).sample(kullm,2000))에 각 규칙만 따로 적용",
+  "old_removed": 107,
+  "curatorkit_removed": 37,
+  "both": [
+   "ku75594",
+   "ku76801",
+   "ku77139",
+   "ku92547",
+   "ku96240",
+   "ku97906",
+   "ku100169",
+   "ku105263",
+   "ku107984",
+   "ku127219",
+   "ku127993",
+   "ku131046",
+   "ku135238",
+   "ku135522",
+   "ku141265",
+   "ku144748"
+  ],
+  "curatorkit_only": [
+   "ku1354",
+   "ku78872",
+   "ku88019",
+   "ku97239",
+   "ku98986",
+   "ku103819",
+   "ku113196",
+   "ku116109",
+   "ku120577",
+   "ku121452",
+   "ku122815",
+   "ku124300",
+   "ku128035",
+   "ku130400",
+   "ku130919",
+   "ku133283",
+   "ku135917",
+   "ku136932",
+   "ku144282",
+   "ku145624",
+   "ku146097"
+  ],
+  "old_only": [
+   "ku54767",
+   "ku54794",
+   "ku55577",
+   "ku56676",
+   "ku57023",
+   "ku60463",
+   "ku62915",
+   "ku64025",
+   "ku65694",
+   "ku66288",
+   "ku66313",
+   "ku67719",
+   "ku67747",
+   "ku68948",
+   "ku69277",
+   "ku69352",
+   "ku70405",
+   "ku70873",
+   "ku72652",
+   "ku72946",
+   "ku73658",
+   "ku73964",
+   "ku74273",
+   "ku76530",
+   "ku77796",
+   "ku79242",
+   "ku79621",
+   "ku79896",
+   "ku80039",
+   "ku80638",
+   "ku82292",
+   "ku82304",
+   "ku83619",
+   "ku84903",
+   "ku84934",
+   "ku85447",
+   "ku85614",
+   "ku87001",
+   "ku87445",
+   "ku87448",
+   "ku87584",
+   "ku88377",
+   "ku88459",
+   "ku88809",
+   "ku90538",
+   "ku90915",
+   "ku96209",
+   "ku96484",
+   "ku97677",
+   "ku100706",
+   "ku104220",
+   "ku104415",
+   "ku104873",
+   "ku106834",
+   "ku107757",
+   "ku110397",
+   "ku111061",
+   "ku115418",
+   "ku115648",
+   "ku116525",
+   "ku116807",
+   "ku118369",
+   "ku118754",
+   "ku119936",
+   "ku121211",
+   "ku122204",
+   "ku123047",
+   "ku123337",
+   "ku123762",
+   "ku123794",
+   "ku123855",
+   "ku125997",
+   "ku128542",
+   "ku128682",
+   "ku129440",
+   "ku131844",
+   "ku132761",
+   "ku133931",
+   "ku135856",
+   "ku137319",
+   "ku137992",
+   "ku139309",
+   "ku143145",
+   "ku143250",
+   "ku143902",
+   "ku144135",
+   "ku148742",
+   "ku149786",
+   "ku150671",
+   "ku151844",
+   "ku152397"
+  ],
+  "kept_by_both": 1872,
+  "n_both": 16,
+  "n_curatorkit_only": 21,
+  "n_old_only": 91,
+  "curatorkit_reason": {
+   "ku1354": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku75594": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku76801": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku77139": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku78872": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku88019": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku92547": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku96240": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku97239": [
+    "MinHashDeduplicator",
+    "near_duplicate(jaccard>=0.85)"
+   ],
+   "ku97906": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku98986": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku100169": [
+    "SecretsGate",
+    "secret_detected:Hex High Entropy String"
+   ],
+   "ku103819": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku105263": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku107984": [
+    "SchemaGate",
+    "missing_field:output"
+   ],
+   "ku113196": [
+    "SecretsGate",
+    "secret_detected:Hex High Entropy String"
+   ],
+   "ku116109": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku120577": [
+    "SecretsGate",
+    "secret_detected:Hex High Entropy String"
+   ],
+   "ku121452": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku122815": [
+    "ExactDeduplicator",
+    "exact_duplicate_of:ku115365"
+   ],
+   "ku124300": [
+    "ExactDeduplicator",
+    "exact_duplicate_of:ku146561"
+   ],
+   "ku127219": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String"
+   ],
+   "ku127993": [
+    "SecretsGate",
+    "secret_detected:Base64 High Entropy String,Hex High Entropy String"
+   ],
+   "ku128035": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku130400": [
+    "ExactDeduplicator",
+    "exact_duplicate_of:ku134286"
+   ],
+   "ku130919": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku131046": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku133283": [
+    "MinHashDeduplicator",
+    "near_duplicate(jaccard>=0.85)"
+   ],
+   "ku135238": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku135522": [
+    "ExactDeduplicator",
+    "exact_duplicate_of:ku85447"
+   ],
+   "ku135917": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku136932": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku141265": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku144282": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku144748": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku145624": [
+    "SchemaGate",
+    "missing_field:instruction"
+   ],
+   "ku146097": [
+    "ExactDeduplicator",
+    "exact_duplicate_of:ku134286"
+   ]
+  },
+  "old_reason_counts": {
+   "prompt_ge_768": 82,
+   "risk_ambiguous_A_review": 9,
+   "empty": 9,
+   "invisible_only": 7
+  },
+  "old_only_reason_counts": {
+   "prompt_ge_768": 76,
+   "risk_ambiguous_A_review": 8,
+   "invisible_only": 7
+  },
+  "curatorkit_only_reason_counts": {
+   "SecretsGate": 6,
+   "SchemaGate": 9,
+   "MinHashDeduplicator": 2,
+   "ExactDeduplicator": 4
+  },
+  "old_only_by_reason": {
+   "prompt_ge_768": [
+    "ku54767",
+    "ku54794",
+    "ku55577",
+    "ku56676",
+    "ku57023",
+    "ku60463",
+    "ku62915",
+    "ku64025",
+    "ku65694",
+    "ku66288",
+    "ku66313",
+    "ku67719",
+    "ku69277",
+    "ku69352",
+    "ku70405",
+    "ku70873",
+    "ku72652",
+    "ku72946",
+    "ku73658",
+    "ku73964",
+    "ku76530",
+    "ku79242",
+    "ku79896",
+    "ku80039",
+    "ku80638",
+    "ku82292",
+    "ku82304",
+    "ku83619",
+    "ku84903",
+    "ku84934",
+    "ku85614",
+    "ku87001",
+    "ku87445",
+    "ku87448",
+    "ku87584",
+    "ku88377",
+    "ku88459",
+    "ku88809",
+    "ku90538",
+    "ku90915",
+    "ku96484",
+    "ku97677",
+    "ku100706",
+    "ku104220",
+    "ku104415",
+    "ku104873",
+    "ku107757",
+    "ku110397",
+    "ku111061",
+    "ku115418",
+    "ku115648",
+    "ku116525",
+    "ku116807",
+    "ku118369",
+    "ku118754",
+    "ku119936",
+    "ku121211",
+    "ku122204",
+    "ku123047",
+    "ku123794",
+    "ku123855",
+    "ku128542",
+    "ku128682",
+    "ku129440",
+    "ku131844",
+    "ku132761",
+    "ku133931",
+    "ku135856",
+    "ku137992",
+    "ku139309",
+    "ku143902",
+    "ku144135",
+    "ku148742",
+    "ku149786",
+    "ku151844",
+    "ku152397"
+   ],
+   "risk_ambiguous_A_review": [
+    "ku67747",
+    "ku85447",
+    "ku106834",
+    "ku123337",
+    "ku123762",
+    "ku125997",
+    "ku137319",
+    "ku150671"
+   ],
+   "invisible_only": [
+    "ku68948",
+    "ku74273",
+    "ku77796",
+    "ku79621",
+    "ku96209",
+    "ku143145",
+    "ku143250"
+   ]
+  }
+ },
+ "final2000_vs_e4": {
+  "same_rows": 1978,
+  "only_new": [
+   "ku649",
+   "ku732",
+   "ku6173",
+   "ku11647",
+   "ku17579",
+   "ku28598",
+   "ku37748",
+   "ku39129",
+   "ku47369",
+   "ku82267",
+   "ku89057",
+   "ku117672",
+   "ku120369",
+   "ku124360",
+   "ku128092",
+   "ku133291",
+   "ku133733",
+   "ku135942",
+   "ku138202",
+   "ku141708",
+   "ku144072",
+   "ku147966"
+  ],
+  "only_e4": [
+   "ku1354",
+   "ku78872",
+   "ku88019",
+   "ku97239",
+   "ku98986",
+   "ku103819",
+   "ku113196",
+   "ku116109",
+   "ku120577",
+   "ku121452",
+   "ku122815",
+   "ku124300",
+   "ku128035",
+   "ku130400",
+   "ku130919",
+   "ku133283",
+   "ku134743",
+   "ku135917",
+   "ku136932",
+   "ku144282",
+   "ku145624",
+   "ku146097"
+  ],
+  "order_of_common_rows_same": true,
+  "last_position_used": 2138,
+  "e4_last_position_used": 2114,
+  "only_e4_reason": {
+   "ku1354": "curatorkit:SecretsGate",
+   "ku78872": "curatorkit:SchemaGate",
+   "ku88019": "curatorkit:SecretsGate",
+   "ku97239": "curatorkit:MinHashDeduplicator",
+   "ku98986": "curatorkit:SecretsGate",
+   "ku103819": "curatorkit:SecretsGate",
+   "ku113196": "curatorkit:SecretsGate",
+   "ku116109": "curatorkit:SchemaGate",
+   "ku120577": "curatorkit:SecretsGate",
+   "ku121452": "curatorkit:SchemaGate",
+   "ku122815": "curatorkit:ExactDeduplicator",
+   "ku124300": "curatorkit:ExactDeduplicator",
+   "ku128035": "curatorkit:SchemaGate",
+   "ku130400": "curatorkit:ExactDeduplicator",
+   "ku130919": "curatorkit:SchemaGate",
+   "ku133283": "curatorkit:MinHashDeduplicator",
+   "ku134743": "curatorkit:ExactDeduplicator",
+   "ku135917": "curatorkit:SchemaGate",
+   "ku136932": "curatorkit:SchemaGate",
+   "ku144282": "curatorkit:SchemaGate",
+   "ku145624": "curatorkit:SchemaGate",
+   "ku146097": "curatorkit:ExactDeduplicator"
+  },
+  "n_only_new": 22,
+  "n_only_e4": 22
+ },
+ "diagnostics": {
+  "schema_default_10_2048_on_final2000": {
+   "would_reject": 0,
+   "reasons": {}
+  },
+  "textcleaner_all_default_rows_changed_on_final2000": 438,
+  "textcleaner_safe_subset_nfc_mojibake_control_rows_changed_on_final2000": 5
+ },
+ "slot100": {
+  "rounds": [
+   {
+    "round": 0,
+    "slot_rejected": {},
+    "clean_rejected_in_joint_run": [],
+    "stage_counts": {
+     "JSONLReader": {
+      "output_count": 2100,
+      "rejected_count": 0
+     },
+     "SchemaGate": {
+      "input_count": 2100,
+      "output_count": 2100,
+      "probe_recovered": 0,
+      "rejected_count": 0
+     },
+     "ExactDeduplicator": {
+      "input_count": 2100,
+      "output_count": 2100
+     },
+     "MinHashDeduplicator": {
+      "input_count": 2100,
+      "output_count": 2100
+     },
+     "SecretsGate": {
+      "input_count": 2100,
+      "output_count": 2100,
+      "probe_recovered": 0,
+      "rejected_count": 0
+     },
+     "MessagesExporter": {
+      "exported_count": 2100
+     }
+    },
+    "export_text_equals_raw": true,
+    "sec": 67.6
+   }
+  ],
+  "compare_vs_e4": {
+   "same": 100,
+   "only_new": [],
+   "only_e4": [],
+   "banned_by_curatorkit": [],
+   "same_order_where_same": true
+  },
+  "match_dist": {
+   "n": 100,
+   "p50": 0,
+   "p90": 0,
+   "max": 2,
+   "mean": 0.05
+  },
+  "e4_match_dist": {
+   "n": 100,
+   "p50": 0,
+   "p90": 0,
+   "max": 2,
+   "mean": 0.05
+  }
+ }
+}

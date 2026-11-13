@@ -1,0 +1,212 @@
+{
+ "base_paper_g0.5": {
+  "e1": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 161,
+   "mean_chars": 224.9,
+   "mean_repeat8": 0.075,
+   "n_distinct": 303,
+   "top_identical": 13,
+   "mean_hangul_frac": 0.686
+  },
+  "mjen": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 53,
+   "mean_chars": 386.3,
+   "mean_repeat8": 0.042,
+   "n_distinct": 298,
+   "top_identical": 11,
+   "mean_hangul_frac": 0.0
+  },
+  "xs": {
+   "n": 450,
+   "empty": 0,
+   "truncated": 156,
+   "mean_chars": 439.1,
+   "mean_repeat8": 0.042,
+   "n_distinct": 444,
+   "top_identical": 5,
+   "mean_hangul_frac": 0.0
+  },
+  "sel": {
+   "n": 200,
+   "empty": 0,
+   "truncated": 112,
+   "mean_chars": 233.4,
+   "mean_repeat8": 0.088,
+   "n_distinct": 183,
+   "top_identical": 15,
+   "mean_hangul_frac": 0.627
+  }
+ },
+ "base_paper_g1.0": {
+  "e1": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 161,
+   "mean_chars": 242.8,
+   "mean_repeat8": 0.064,
+   "n_distinct": 312,
+   "top_identical": 4,
+   "mean_hangul_frac": 0.689
+  },
+  "mjen": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 99,
+   "mean_chars": 494.7,
+   "mean_repeat8": 0.037,
+   "n_distinct": 300,
+   "top_identical": 4,
+   "mean_hangul_frac": 0.0
+  },
+  "xs": {
+   "n": 450,
+   "empty": 0,
+   "truncated": 183,
+   "mean_chars": 507.8,
+   "mean_repeat8": 0.038,
+   "n_distinct": 449,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.0
+  },
+  "sel": {
+   "n": 200,
+   "empty": 0,
+   "truncated": 142,
+   "mean_chars": 271.6,
+   "mean_repeat8": 0.063,
+   "n_distinct": 198,
+   "top_identical": 3,
+   "mean_hangul_frac": 0.622
+  }
+ },
+ "T100_paper_new_g0.5": {
+  "e1": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 96,
+   "mean_chars": 207.4,
+   "mean_repeat8": 0.108,
+   "n_distinct": 315,
+   "top_identical": 1,
+   "mean_hangul_frac": 0.713
+  },
+  "mjen": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 58,
+   "mean_chars": 377.1,
+   "mean_repeat8": 0.059,
+   "n_distinct": 312,
+   "top_identical": 3,
+   "mean_hangul_frac": 0.002
+  },
+  "xs": {
+   "n": 450,
+   "empty": 0,
+   "truncated": 81,
+   "mean_chars": 377.7,
+   "mean_repeat8": 0.063,
+   "n_distinct": 449,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.0
+  },
+  "sel": {
+   "n": 200,
+   "empty": 0,
+   "truncated": 89,
+   "mean_chars": 231.6,
+   "mean_repeat8": 0.113,
+   "n_distinct": 198,
+   "top_identical": 3,
+   "mean_hangul_frac": 0.659
+  }
+ },
+ "T100_paper_new_g1.0": {
+  "e1": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 76,
+   "mean_chars": 201.6,
+   "mean_repeat8": 0.08,
+   "n_distinct": 315,
+   "top_identical": 1,
+   "mean_hangul_frac": 0.721
+  },
+  "mjen": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 27,
+   "mean_chars": 349.1,
+   "mean_repeat8": 0.046,
+   "n_distinct": 314,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.002
+  },
+  "xs": {
+   "n": 450,
+   "empty": 0,
+   "truncated": 101,
+   "mean_chars": 390.1,
+   "mean_repeat8": 0.05,
+   "n_distinct": 449,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.0
+  },
+  "sel": {
+   "n": 200,
+   "empty": 0,
+   "truncated": 89,
+   "mean_chars": 231.1,
+   "mean_repeat8": 0.084,
+   "n_distinct": 198,
+   "top_identical": 3,
+   "mean_hangul_frac": 0.668
+  }
+ },
+ "pub_T100_paper_g1.0": {
+  "e1": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 83,
+   "mean_chars": 205.7,
+   "mean_repeat8": 0.084,
+   "n_distinct": 315,
+   "top_identical": 1,
+   "mean_hangul_frac": 0.719
+  },
+  "mjen": {
+   "n": 315,
+   "empty": 0,
+   "truncated": 37,
+   "mean_chars": 352.6,
+   "mean_repeat8": 0.046,
+   "n_distinct": 311,
+   "top_identical": 3,
+   "mean_hangul_frac": 0.002
+  },
+  "xs": {
+   "n": 450,
+   "empty": 0,
+   "truncated": 111,
+   "mean_chars": 396.5,
+   "mean_repeat8": 0.051,
+   "n_distinct": 448,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.0
+  },
+  "sel": {
+   "n": 200,
+   "empty": 0,
+   "truncated": 98,
+   "mean_chars": 235.4,
+   "mean_repeat8": 0.085,
+   "n_distinct": 199,
+   "top_identical": 2,
+   "mean_hangul_frac": 0.665
+  }
+ }
+}

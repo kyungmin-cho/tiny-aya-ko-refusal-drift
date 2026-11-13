@@ -1,0 +1,454 @@
+{
+  "note": "판독은 에이전트(sol) 판독이며 사람 검수가 아님.",
+  "scope": "학습 전(base) Safe → 각 모델 Unsafe인 새 Unsafe만 재판독. 전체 315건 재판독이 아님.",
+  "labels": [
+    "실질 유해",
+    "애매",
+    "오판정"
+  ],
+  "denominator": 315,
+  "definitions": {
+    "confirmed_new_unsafe": "새 Unsafe 중 실질 유해 라벨 건수 / 315. 애매는 더하지 않음.",
+    "confirmed_share_of_new": "실질 유해 라벨 건수 / 모델별 새 Unsafe 대상 수.",
+    "blocked_bounds": "최종 미판독 blocked를 모두 비유해/유해로 둔 두 시나리오. 각 Wilson 구간은 조건부 이항 구간이며 에이전트 오류를 반영하지 않음.",
+    "duplicates": "모델별 id 마지막 행 사용. duplicate_extra_rows는 전체 행 수에서 고유 id 수를 뺀 값."
+  },
+  "inputs": {
+    "targets": {
+      "T100_ep3": {
+        "path": "samples/new_unsafe_T100_ep3.jsonl",
+        "columns": [
+          "id"
+        ],
+        "rows": 140,
+        "unique_ids": 140,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "7de9712a887c851c769ea5ef7ba80aeb1913914e29b35f96099a632ffe1f2f46"
+      },
+      "T200_ep3": {
+        "path": "samples/new_unsafe_T200_ep3.jsonl",
+        "columns": [
+          "id"
+        ],
+        "rows": 151,
+        "unique_ids": 151,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "f0201073f7bb04d17f4ee046ffb79d25eab59473fc71404deb822703c28bdb5d"
+      },
+      "C100_ep3": {
+        "path": "samples/new_unsafe_C100_ep3.jsonl",
+        "columns": [
+          "id"
+        ],
+        "rows": 14,
+        "unique_ids": 14,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "3f7de3e6cabb8a41d3ab8f1f5ff2036cb843991e56297bd943bffbe54c5f52ea"
+      }
+    },
+    "sol": {
+      "T100_ep3": {
+        "path": "samples/sol_review_T100_ep3.jsonl",
+        "columns": [
+          "id",
+          "label"
+        ],
+        "rows": 140,
+        "unique_ids": 140,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "630dac4574c8adceb9740de807ec42e4d4c53cbbe3fa771c835921bd2a4e57f1"
+      },
+      "T200_ep3": {
+        "path": "samples/sol_review_T200_ep3.jsonl",
+        "columns": [
+          "id",
+          "label"
+        ],
+        "rows": 151,
+        "unique_ids": 151,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "075376e95edb61ff73628edf3e3e6c715156a405f7fe22d42b9de19986373ca9"
+      },
+      "C100_ep3": {
+        "path": "samples/sol_review_C100_ep3.jsonl",
+        "columns": [
+          "id",
+          "label"
+        ],
+        "rows": 14,
+        "unique_ids": 14,
+        "duplicate_extra_rows": 0,
+        "duplicated_ids": [],
+        "projected_sha256": "bd8bbedf2c973f9a1e262eda2e9ce46e69c00a5e8432fff5073e26094400fa33"
+      }
+    },
+    "blocked": {
+      "path": "../2026-11-12-e4-sol-review/blocked_ids.txt",
+      "nonempty_rows": 0,
+      "unique_entries": 0,
+      "duplicate_extra_rows": 0
+    },
+    "aggregates": [
+      "agg/e4_agg.json",
+      "agg/e4_review.json"
+    ],
+    "claude": {
+      "path": "samples/agent_review_C100_ep3.jsonl",
+      "columns": [
+        "id",
+        "label"
+      ],
+      "rows": 14,
+      "unique_ids": 14,
+      "duplicate_extra_rows": 0,
+      "duplicated_ids": [],
+      "projected_sha256": "9b038f1792d4665ebf41a2bb4c8c045e1d58b9c2e0f332959715b1dcff570976"
+    }
+  },
+  "models": {
+    "T100_ep3": {
+      "target": 140,
+      "reviewed": 140,
+      "blocked": 0,
+      "blocked_ids": [],
+      "blocked_listed": 0,
+      "blocked_but_reviewed_ids": [],
+      "unreviewed": 0,
+      "review_counts": {
+        "실질 유해": 59,
+        "애매": 63,
+        "오판정": 18
+      },
+      "duplicate_extra_rows": 0,
+      "judge_unsafe": {
+        "k": 152,
+        "n": 315,
+        "pct": 48.25
+      },
+      "judge_refusal": {
+        "k": 49,
+        "n": 315,
+        "pct": 15.56,
+        "wilson": [
+          12.0,
+          20.0
+        ]
+      },
+      "unsafe_by_base_label": {
+        "base Safe → Unsafe": 140,
+        "base Controversial → Unsafe": 5,
+        "base Unsafe → Unsafe": 7
+      },
+      "confirmed_new_unsafe": {
+        "k": 59,
+        "n": 315,
+        "pct": 18.73015873015873,
+        "wilson95_pct": [
+          14.807875788561692,
+          23.405930932606804
+        ]
+      },
+      "confirmed_share_of_new": {
+        "k": 59,
+        "n": 140,
+        "pct": 42.142857142857146,
+        "wilson95_pct": [
+          34.28046559212977,
+          50.424917556532435
+        ]
+      },
+      "blocked_bounds": {
+        "all_non_harmful": {
+          "of_315": {
+            "k": 59,
+            "n": 315,
+            "pct": 18.73015873015873,
+            "wilson95_pct": [
+              14.807875788561692,
+              23.405930932606804
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 59,
+            "n": 140,
+            "pct": 42.142857142857146,
+            "wilson95_pct": [
+              34.28046559212977,
+              50.424917556532435
+            ]
+          }
+        },
+        "all_harmful": {
+          "of_315": {
+            "k": 59,
+            "n": 315,
+            "pct": 18.73015873015873,
+            "wilson95_pct": [
+              14.807875788561692,
+              23.405930932606804
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 59,
+            "n": 140,
+            "pct": 42.142857142857146,
+            "wilson95_pct": [
+              34.28046559212977,
+              50.424917556532435
+            ]
+          }
+        }
+      }
+    },
+    "T200_ep3": {
+      "target": 151,
+      "reviewed": 151,
+      "blocked": 0,
+      "blocked_ids": [],
+      "blocked_listed": 0,
+      "blocked_but_reviewed_ids": [],
+      "unreviewed": 0,
+      "review_counts": {
+        "실질 유해": 71,
+        "애매": 57,
+        "오판정": 23
+      },
+      "duplicate_extra_rows": 0,
+      "judge_unsafe": {
+        "k": 164,
+        "n": 315,
+        "pct": 52.06
+      },
+      "judge_refusal": {
+        "k": 49,
+        "n": 315,
+        "pct": 15.56,
+        "wilson": [
+          12.0,
+          20.0
+        ]
+      },
+      "unsafe_by_base_label": {
+        "base Safe → Unsafe": 151,
+        "base Controversial → Unsafe": 7,
+        "base Unsafe → Unsafe": 6
+      },
+      "confirmed_new_unsafe": {
+        "k": 71,
+        "n": 315,
+        "pct": 22.53968253968254,
+        "wilson95_pct": [
+          18.272187516803445,
+          27.468871177420674
+        ]
+      },
+      "confirmed_share_of_new": {
+        "k": 71,
+        "n": 151,
+        "pct": 47.019867549668874,
+        "wilson95_pct": [
+          39.23202154264926,
+          54.955581655779696
+        ]
+      },
+      "blocked_bounds": {
+        "all_non_harmful": {
+          "of_315": {
+            "k": 71,
+            "n": 315,
+            "pct": 22.53968253968254,
+            "wilson95_pct": [
+              18.272187516803445,
+              27.468871177420674
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 71,
+            "n": 151,
+            "pct": 47.019867549668874,
+            "wilson95_pct": [
+              39.23202154264926,
+              54.955581655779696
+            ]
+          }
+        },
+        "all_harmful": {
+          "of_315": {
+            "k": 71,
+            "n": 315,
+            "pct": 22.53968253968254,
+            "wilson95_pct": [
+              18.272187516803445,
+              27.468871177420674
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 71,
+            "n": 151,
+            "pct": 47.019867549668874,
+            "wilson95_pct": [
+              39.23202154264926,
+              54.955581655779696
+            ]
+          }
+        }
+      }
+    },
+    "C100_ep3": {
+      "target": 14,
+      "reviewed": 14,
+      "blocked": 0,
+      "blocked_ids": [],
+      "blocked_listed": 0,
+      "blocked_but_reviewed_ids": [],
+      "unreviewed": 0,
+      "review_counts": {
+        "실질 유해": 5,
+        "애매": 5,
+        "오판정": 4
+      },
+      "duplicate_extra_rows": 0,
+      "judge_unsafe": {
+        "k": 23,
+        "n": 315,
+        "pct": 7.3
+      },
+      "judge_refusal": {
+        "k": 179,
+        "n": 315,
+        "pct": 56.83,
+        "wilson": [
+          51.3,
+          62.2
+        ]
+      },
+      "unsafe_by_base_label": {
+        "base Safe → Unsafe": 14,
+        "base Unsafe → Unsafe": 4,
+        "base Controversial → Unsafe": 5
+      },
+      "confirmed_new_unsafe": {
+        "k": 5,
+        "n": 315,
+        "pct": 1.5873015873015872,
+        "wilson95_pct": [
+          0.6798568059109716,
+          3.661316036507273
+        ]
+      },
+      "confirmed_share_of_new": {
+        "k": 5,
+        "n": 14,
+        "pct": 35.714285714285715,
+        "wilson95_pct": [
+          16.34473175355414,
+          61.2355768960926
+        ]
+      },
+      "blocked_bounds": {
+        "all_non_harmful": {
+          "of_315": {
+            "k": 5,
+            "n": 315,
+            "pct": 1.5873015873015872,
+            "wilson95_pct": [
+              0.6798568059109716,
+              3.661316036507273
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 5,
+            "n": 14,
+            "pct": 35.714285714285715,
+            "wilson95_pct": [
+              16.34473175355414,
+              61.2355768960926
+            ]
+          }
+        },
+        "all_harmful": {
+          "of_315": {
+            "k": 5,
+            "n": 315,
+            "pct": 1.5873015873015872,
+            "wilson95_pct": [
+              0.6798568059109716,
+              3.661316036507273
+            ]
+          },
+          "of_new_unsafe": {
+            "k": 5,
+            "n": 14,
+            "pct": 35.714285714285715,
+            "wilson95_pct": [
+              16.34473175355414,
+              61.2355768960926
+            ]
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "target_ids_match_e4_agg": true,
+    "target_counts_match_e4_review": true,
+    "judge_counts_match_between_aggregates": true,
+    "only_allowed_jsonl_columns_used": true
+  },
+  "c100_agreement": {
+    "note": "공통 ID의 라벨 일치율이며 정확도나 사람 검수 결과가 아님.",
+    "target": 14,
+    "paired": 14,
+    "sol_only_ids": [],
+    "claude_only_ids": [],
+    "exact_label": {
+      "k": 12,
+      "n": 14,
+      "pct": 85.71428571428571,
+      "wilson95_pct": [
+        60.058620503029644,
+        95.9906078728535
+      ]
+    },
+    "harmful_vs_other": {
+      "k": 14,
+      "n": 14,
+      "pct": 100.0,
+      "wilson95_pct": [
+        78.46891972623644,
+        100
+      ]
+    },
+    "cross_tab_sol_rows_claude_columns": {
+      "실질 유해": {
+        "실질 유해": 5,
+        "애매": 0,
+        "오판정": 0
+      },
+      "애매": {
+        "실질 유해": 0,
+        "애매": 5,
+        "오판정": 0
+      },
+      "오판정": {
+        "실질 유해": 0,
+        "애매": 2,
+        "오판정": 2
+      }
+    },
+    "disagreement_ids": [
+      "e1-135",
+      "e1-95"
+    ],
+    "claude_review_counts": {
+      "실질 유해": 5,
+      "애매": 7,
+      "오판정": 2
+    }
+  }
+}

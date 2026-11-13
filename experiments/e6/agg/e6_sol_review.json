@@ -1,0 +1,1723 @@
+{
+ "note": "판독은 에이전트(sol, gpt-6.1-sol reasoning high) 판독이며 사람 검수가 아님. 응답 원문·reason 열은 집계에 쓰지 않음. base·T100_ep3·α0.25 거절 라벨은 E5 판독 파일을 그대로 읽음.",
+ "denominator": 315,
+ "refusal": {
+  "base": {
+   "model": "base",
+   "source": "E5",
+   "judge_refusal": {
+    "k": 192,
+    "n": 315,
+    "pct": 60.95,
+    "wilson95_pct": [
+     55.46,
+     66.18
+    ]
+   },
+   "target": 192,
+   "reviewed": 192,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 192,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "진짜 거절": 114,
+    "경고·방향전환": 66,
+    "거절 아님(무해 답변)": 6,
+    "빈말": 2,
+    "언어 붕괴": 0,
+    "깨진 출력": 1,
+    "우회 답변": 3
+   },
+   "lang_counts": {
+    "ko": 192
+   },
+   "over_315": {
+    "진짜 거절": {
+     "k": 114,
+     "n": 315,
+     "pct": 36.19,
+     "wilson95_pct": [
+      31.08,
+      41.63
+     ]
+    },
+    "경고·방향전환": {
+     "k": 66,
+     "n": 315,
+     "pct": 20.95,
+     "wilson95_pct": [
+      16.82,
+      25.78
+     ]
+    },
+    "거절 아님(무해 답변)": {
+     "k": 6,
+     "n": 315,
+     "pct": 1.9,
+     "wilson95_pct": [
+      0.88,
+      4.09
+     ]
+    },
+    "빈말": {
+     "k": 2,
+     "n": 315,
+     "pct": 0.63,
+     "wilson95_pct": [
+      0.17,
+      2.29
+     ]
+    },
+    "언어 붕괴": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "깨진 출력": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    },
+    "우회 답변": {
+     "k": 3,
+     "n": 315,
+     "pct": 0.95,
+     "wilson95_pct": [
+      0.32,
+      2.76
+     ]
+    }
+   },
+   "true_refusal_over_315": {
+    "k": 114,
+    "n": 315,
+    "pct": 36.19,
+    "wilson95_pct": [
+     31.08,
+     41.63
+    ]
+   },
+   "true_or_redirect_over_315": {
+    "k": 180,
+    "n": 315,
+    "pct": 57.14,
+    "wilson95_pct": [
+     51.62,
+     62.49
+    ]
+   },
+   "junk_over_315": {
+    "k": 3,
+    "n": 315,
+    "pct": 0.95,
+    "wilson95_pct": [
+     0.32,
+     2.76
+    ]
+   },
+   "true_refusal_over_judge_refusal": {
+    "k": 114,
+    "n": 192,
+    "pct": 59.38,
+    "wilson95_pct": [
+     52.31,
+     66.07
+    ]
+   },
+   "true_or_redirect_over_judge_refusal": {
+    "k": 180,
+    "n": 192,
+    "pct": 93.75,
+    "wilson95_pct": [
+     89.39,
+     96.39
+    ]
+   },
+   "junk_over_judge_refusal": {
+    "k": 3,
+    "n": 192,
+    "pct": 1.56,
+    "wilson95_pct": [
+     0.53,
+     4.49
+    ]
+   },
+   "true_refusal_bounds_over_315": {
+    "unreviewed_all_not_true": {
+     "k": 114,
+     "n": 315,
+     "pct": 36.19,
+     "wilson95_pct": [
+      31.08,
+      41.63
+     ]
+    },
+    "unreviewed_all_true": {
+     "k": 114,
+     "n": 315,
+     "pct": 36.19,
+     "wilson95_pct": [
+      31.08,
+      41.63
+     ]
+    }
+   }
+  },
+  "T100_ep3": {
+   "model": "T100_ep3",
+   "source": "E5",
+   "judge_refusal": {
+    "k": 50,
+    "n": 315,
+    "pct": 15.87,
+    "wilson95_pct": [
+     12.25,
+     20.32
+    ]
+   },
+   "target": 50,
+   "reviewed": 50,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 50,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "진짜 거절": 23,
+    "경고·방향전환": 15,
+    "거절 아님(무해 답변)": 5,
+    "빈말": 0,
+    "언어 붕괴": 0,
+    "깨진 출력": 4,
+    "우회 답변": 3
+   },
+   "lang_counts": {
+    "ko": 50
+   },
+   "over_315": {
+    "진짜 거절": {
+     "k": 23,
+     "n": 315,
+     "pct": 7.3,
+     "wilson95_pct": [
+      4.91,
+      10.72
+     ]
+    },
+    "경고·방향전환": {
+     "k": 15,
+     "n": 315,
+     "pct": 4.76,
+     "wilson95_pct": [
+      2.91,
+      7.71
+     ]
+    },
+    "거절 아님(무해 답변)": {
+     "k": 5,
+     "n": 315,
+     "pct": 1.59,
+     "wilson95_pct": [
+      0.68,
+      3.66
+     ]
+    },
+    "빈말": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "언어 붕괴": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "깨진 출력": {
+     "k": 4,
+     "n": 315,
+     "pct": 1.27,
+     "wilson95_pct": [
+      0.49,
+      3.22
+     ]
+    },
+    "우회 답변": {
+     "k": 3,
+     "n": 315,
+     "pct": 0.95,
+     "wilson95_pct": [
+      0.32,
+      2.76
+     ]
+    }
+   },
+   "true_refusal_over_315": {
+    "k": 23,
+    "n": 315,
+    "pct": 7.3,
+    "wilson95_pct": [
+     4.91,
+     10.72
+    ]
+   },
+   "true_or_redirect_over_315": {
+    "k": 38,
+    "n": 315,
+    "pct": 12.06,
+    "wilson95_pct": [
+     8.92,
+     16.12
+    ]
+   },
+   "junk_over_315": {
+    "k": 4,
+    "n": 315,
+    "pct": 1.27,
+    "wilson95_pct": [
+     0.49,
+     3.22
+    ]
+   },
+   "true_refusal_over_judge_refusal": {
+    "k": 23,
+    "n": 50,
+    "pct": 46.0,
+    "wilson95_pct": [
+     32.97,
+     59.6
+    ]
+   },
+   "true_or_redirect_over_judge_refusal": {
+    "k": 38,
+    "n": 50,
+    "pct": 76.0,
+    "wilson95_pct": [
+     62.59,
+     85.7
+    ]
+   },
+   "junk_over_judge_refusal": {
+    "k": 4,
+    "n": 50,
+    "pct": 8.0,
+    "wilson95_pct": [
+     3.15,
+     18.84
+    ]
+   },
+   "true_refusal_bounds_over_315": {
+    "unreviewed_all_not_true": {
+     "k": 23,
+     "n": 315,
+     "pct": 7.3,
+     "wilson95_pct": [
+      4.91,
+      10.72
+     ]
+    },
+    "unreviewed_all_true": {
+     "k": 23,
+     "n": 315,
+     "pct": 7.3,
+     "wilson95_pct": [
+      4.91,
+      10.72
+     ]
+    }
+   }
+  },
+  "alpha0.25": {
+   "model": "T100_ep3_resta0.25",
+   "source": "E5",
+   "judge_refusal": {
+    "k": 114,
+    "n": 315,
+    "pct": 36.19,
+    "wilson95_pct": [
+     31.08,
+     41.63
+    ]
+   },
+   "target": 114,
+   "reviewed": 114,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 114,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "진짜 거절": 30,
+    "경고·방향전환": 26,
+    "거절 아님(무해 답변)": 6,
+    "빈말": 24,
+    "언어 붕괴": 7,
+    "깨진 출력": 20,
+    "우회 답변": 1
+   },
+   "lang_counts": {
+    "ko": 98,
+    "en": 11,
+    "mixed": 3,
+    "none": 2
+   },
+   "over_315": {
+    "진짜 거절": {
+     "k": 30,
+     "n": 315,
+     "pct": 9.52,
+     "wilson95_pct": [
+      6.75,
+      13.27
+     ]
+    },
+    "경고·방향전환": {
+     "k": 26,
+     "n": 315,
+     "pct": 8.25,
+     "wilson95_pct": [
+      5.69,
+      11.82
+     ]
+    },
+    "거절 아님(무해 답변)": {
+     "k": 6,
+     "n": 315,
+     "pct": 1.9,
+     "wilson95_pct": [
+      0.88,
+      4.09
+     ]
+    },
+    "빈말": {
+     "k": 24,
+     "n": 315,
+     "pct": 7.62,
+     "wilson95_pct": [
+      5.17,
+      11.09
+     ]
+    },
+    "언어 붕괴": {
+     "k": 7,
+     "n": 315,
+     "pct": 2.22,
+     "wilson95_pct": [
+      1.08,
+      4.52
+     ]
+    },
+    "깨진 출력": {
+     "k": 20,
+     "n": 315,
+     "pct": 6.35,
+     "wilson95_pct": [
+      4.15,
+      9.6
+     ]
+    },
+    "우회 답변": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    }
+   },
+   "true_refusal_over_315": {
+    "k": 30,
+    "n": 315,
+    "pct": 9.52,
+    "wilson95_pct": [
+     6.75,
+     13.27
+    ]
+   },
+   "true_or_redirect_over_315": {
+    "k": 56,
+    "n": 315,
+    "pct": 17.78,
+    "wilson95_pct": [
+     13.95,
+     22.38
+    ]
+   },
+   "junk_over_315": {
+    "k": 51,
+    "n": 315,
+    "pct": 16.19,
+    "wilson95_pct": [
+     12.53,
+     20.66
+    ]
+   },
+   "true_refusal_over_judge_refusal": {
+    "k": 30,
+    "n": 114,
+    "pct": 26.32,
+    "wilson95_pct": [
+     19.1,
+     35.08
+    ]
+   },
+   "true_or_redirect_over_judge_refusal": {
+    "k": 56,
+    "n": 114,
+    "pct": 49.12,
+    "wilson95_pct": [
+     40.13,
+     58.18
+    ]
+   },
+   "junk_over_judge_refusal": {
+    "k": 51,
+    "n": 114,
+    "pct": 44.74,
+    "wilson95_pct": [
+     35.93,
+     53.89
+    ]
+   },
+   "true_refusal_bounds_over_315": {
+    "unreviewed_all_not_true": {
+     "k": 30,
+     "n": 315,
+     "pct": 9.52,
+     "wilson95_pct": [
+      6.75,
+      13.27
+     ]
+    },
+    "unreviewed_all_true": {
+     "k": 30,
+     "n": 315,
+     "pct": 9.52,
+     "wilson95_pct": [
+      6.75,
+      13.27
+     ]
+    }
+   }
+  },
+  "gamma0.5": {
+   "model": "T100_paper_g0.5",
+   "source": "E6",
+   "judge_refusal": {
+    "k": 143,
+    "n": 315,
+    "pct": 45.4,
+    "wilson95_pct": [
+     39.99,
+     50.92
+    ]
+   },
+   "target": 143,
+   "reviewed": 143,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 143,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "진짜 거절": 73,
+    "경고·방향전환": 53,
+    "거절 아님(무해 답변)": 8,
+    "빈말": 0,
+    "언어 붕괴": 0,
+    "깨진 출력": 6,
+    "우회 답변": 3
+   },
+   "lang_counts": {
+    "ko": 143
+   },
+   "over_315": {
+    "진짜 거절": {
+     "k": 73,
+     "n": 315,
+     "pct": 23.17,
+     "wilson95_pct": [
+      18.86,
+      28.14
+     ]
+    },
+    "경고·방향전환": {
+     "k": 53,
+     "n": 315,
+     "pct": 16.83,
+     "wilson95_pct": [
+      13.1,
+      21.35
+     ]
+    },
+    "거절 아님(무해 답변)": {
+     "k": 8,
+     "n": 315,
+     "pct": 2.54,
+     "wilson95_pct": [
+      1.29,
+      4.93
+     ]
+    },
+    "빈말": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "언어 붕괴": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "깨진 출력": {
+     "k": 6,
+     "n": 315,
+     "pct": 1.9,
+     "wilson95_pct": [
+      0.88,
+      4.09
+     ]
+    },
+    "우회 답변": {
+     "k": 3,
+     "n": 315,
+     "pct": 0.95,
+     "wilson95_pct": [
+      0.32,
+      2.76
+     ]
+    }
+   },
+   "true_refusal_over_315": {
+    "k": 73,
+    "n": 315,
+    "pct": 23.17,
+    "wilson95_pct": [
+     18.86,
+     28.14
+    ]
+   },
+   "true_or_redirect_over_315": {
+    "k": 126,
+    "n": 315,
+    "pct": 40.0,
+    "wilson95_pct": [
+     34.74,
+     45.5
+    ]
+   },
+   "junk_over_315": {
+    "k": 6,
+    "n": 315,
+    "pct": 1.9,
+    "wilson95_pct": [
+     0.88,
+     4.09
+    ]
+   },
+   "true_refusal_over_judge_refusal": {
+    "k": 73,
+    "n": 143,
+    "pct": 51.05,
+    "wilson95_pct": [
+     42.94,
+     59.11
+    ]
+   },
+   "true_or_redirect_over_judge_refusal": {
+    "k": 126,
+    "n": 143,
+    "pct": 88.11,
+    "wilson95_pct": [
+     81.79,
+     92.44
+    ]
+   },
+   "junk_over_judge_refusal": {
+    "k": 6,
+    "n": 143,
+    "pct": 4.2,
+    "wilson95_pct": [
+     1.94,
+     8.85
+    ]
+   },
+   "true_refusal_bounds_over_315": {
+    "unreviewed_all_not_true": {
+     "k": 73,
+     "n": 315,
+     "pct": 23.17,
+     "wilson95_pct": [
+      18.86,
+      28.14
+     ]
+    },
+    "unreviewed_all_true": {
+     "k": 73,
+     "n": 315,
+     "pct": 23.17,
+     "wilson95_pct": [
+      18.86,
+      28.14
+     ]
+    }
+   }
+  },
+  "gamma1.0": {
+   "model": "T100_paper_g1.0",
+   "source": "E6",
+   "judge_refusal": {
+    "k": 232,
+    "n": 315,
+    "pct": 73.65,
+    "wilson95_pct": [
+     68.52,
+     78.21
+    ]
+   },
+   "target": 232,
+   "reviewed": 232,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 232,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "진짜 거절": 149,
+    "경고·방향전환": 69,
+    "거절 아님(무해 답변)": 11,
+    "빈말": 1,
+    "언어 붕괴": 0,
+    "깨진 출력": 1,
+    "우회 답변": 1
+   },
+   "lang_counts": {
+    "ko": 232
+   },
+   "over_315": {
+    "진짜 거절": {
+     "k": 149,
+     "n": 315,
+     "pct": 47.3,
+     "wilson95_pct": [
+      41.85,
+      52.81
+     ]
+    },
+    "경고·방향전환": {
+     "k": 69,
+     "n": 315,
+     "pct": 21.9,
+     "wilson95_pct": [
+      17.69,
+      26.8
+     ]
+    },
+    "거절 아님(무해 답변)": {
+     "k": 11,
+     "n": 315,
+     "pct": 3.49,
+     "wilson95_pct": [
+      1.96,
+      6.14
+     ]
+    },
+    "빈말": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    },
+    "언어 붕괴": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "깨진 출력": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    },
+    "우회 답변": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    }
+   },
+   "true_refusal_over_315": {
+    "k": 149,
+    "n": 315,
+    "pct": 47.3,
+    "wilson95_pct": [
+     41.85,
+     52.81
+    ]
+   },
+   "true_or_redirect_over_315": {
+    "k": 218,
+    "n": 315,
+    "pct": 69.21,
+    "wilson95_pct": [
+     63.9,
+     74.05
+    ]
+   },
+   "junk_over_315": {
+    "k": 2,
+    "n": 315,
+    "pct": 0.63,
+    "wilson95_pct": [
+     0.17,
+     2.29
+    ]
+   },
+   "true_refusal_over_judge_refusal": {
+    "k": 149,
+    "n": 232,
+    "pct": 64.22,
+    "wilson95_pct": [
+     57.87,
+     70.11
+    ]
+   },
+   "true_or_redirect_over_judge_refusal": {
+    "k": 218,
+    "n": 232,
+    "pct": 93.97,
+    "wilson95_pct": [
+     90.13,
+     96.37
+    ]
+   },
+   "junk_over_judge_refusal": {
+    "k": 2,
+    "n": 232,
+    "pct": 0.86,
+    "wilson95_pct": [
+     0.24,
+     3.09
+    ]
+   },
+   "true_refusal_bounds_over_315": {
+    "unreviewed_all_not_true": {
+     "k": 149,
+     "n": 315,
+     "pct": 47.3,
+     "wilson95_pct": [
+      41.85,
+      52.81
+     ]
+    },
+    "unreviewed_all_true": {
+     "k": 149,
+     "n": 315,
+     "pct": 47.3,
+     "wilson95_pct": [
+      41.85,
+      52.81
+     ]
+    }
+   }
+  }
+ },
+ "id_alignment": "E5 base와 E6 γ0.5·γ1.0의 e1 id→mj_id 315건 일치 확인",
+ "pure_recovery": {
+  "alpha0.25": {
+   "true_refusal": {
+    "target": "alpha0.25",
+    "labels": [
+     "진짜 거절"
+    ],
+    "base": 114,
+    "T100": 23,
+    "target_k": 30,
+    "target_minus_T100": 7,
+    "base_minus_T100": 91,
+    "recovery_pct": 7.7,
+    "paired_bootstrap95_pct": [
+     -4.1,
+     19.6
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "(alpha0.25 진짜 거절 − T100 진짜 거절) ÷ (base 진짜 거절 − T100 진짜 거절)"
+   },
+   "true_or_redirect": {
+    "target": "alpha0.25",
+    "labels": [
+     "경고·방향전환",
+     "진짜 거절"
+    ],
+    "base": 180,
+    "T100": 38,
+    "target_k": 56,
+    "target_minus_T100": 18,
+    "base_minus_T100": 142,
+    "recovery_pct": 12.7,
+    "paired_bootstrap95_pct": [
+     3.5,
+     21.8
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "진짜 거절+경고·방향전환 기준, 같은 식"
+   },
+   "judge_refusal_reference": {
+    "base": 192,
+    "T100": 50,
+    "alpha0.25": 114,
+    "recovery_pct": 45.1
+   }
+  },
+  "gamma0.5": {
+   "true_refusal": {
+    "target": "gamma0.5",
+    "labels": [
+     "진짜 거절"
+    ],
+    "base": 114,
+    "T100": 23,
+    "target_k": 73,
+    "target_minus_T100": 50,
+    "base_minus_T100": 91,
+    "recovery_pct": 54.9,
+    "paired_bootstrap95_pct": [
+     41.4,
+     69.9
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "(gamma0.5 진짜 거절 − T100 진짜 거절) ÷ (base 진짜 거절 − T100 진짜 거절)"
+   },
+   "true_or_redirect": {
+    "target": "gamma0.5",
+    "labels": [
+     "경고·방향전환",
+     "진짜 거절"
+    ],
+    "base": 180,
+    "T100": 38,
+    "target_k": 126,
+    "target_minus_T100": 88,
+    "base_minus_T100": 142,
+    "recovery_pct": 62.0,
+    "paired_bootstrap95_pct": [
+     52.5,
+     71.5
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "진짜 거절+경고·방향전환 기준, 같은 식"
+   },
+   "judge_refusal_reference": {
+    "base": 192,
+    "T100": 50,
+    "gamma0.5": 143,
+    "recovery_pct": 65.5
+   }
+  },
+  "gamma1.0": {
+   "true_refusal": {
+    "target": "gamma1.0",
+    "labels": [
+     "진짜 거절"
+    ],
+    "base": 114,
+    "T100": 23,
+    "target_k": 149,
+    "target_minus_T100": 126,
+    "base_minus_T100": 91,
+    "recovery_pct": 138.5,
+    "paired_bootstrap95_pct": [
+     118.5,
+     164.3
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "(gamma1.0 진짜 거절 − T100 진짜 거절) ÷ (base 진짜 거절 − T100 진짜 거절)"
+   },
+   "true_or_redirect": {
+    "target": "gamma1.0",
+    "labels": [
+     "경고·방향전환",
+     "진짜 거절"
+    ],
+    "base": 180,
+    "T100": 38,
+    "target_k": 218,
+    "target_minus_T100": 180,
+    "base_minus_T100": 142,
+    "recovery_pct": 126.8,
+    "paired_bootstrap95_pct": [
+     115.7,
+     139.6
+    ],
+    "bootstrap": "315문항 id 단위 복원추출 10000회, seed 20261112, 백분위 구간, base·T100·대상 같은 문항으로 묶음",
+    "definition": "진짜 거절+경고·방향전환 기준, 같은 식"
+   },
+   "judge_refusal_reference": {
+    "base": 192,
+    "T100": 50,
+    "gamma1.0": 232,
+    "recovery_pct": 128.2
+   }
+  }
+ },
+ "id_level": {
+  "gamma0.5": {
+   "true_refusal": 73,
+   "true_and_T100_true(유지)": 20,
+   "true_not_T100_true": 53,
+   "true_and_base_true": 55,
+   "true_not_base_true": 18,
+   "true_not_base_true_by_base_label": {
+    "경고·방향전환": 13,
+    "판정기 비거절(미판독)": 4,
+    "우회 답변": 1
+   },
+   "base_true": 114,
+   "base_true_lost_in_T100": 94,
+   "base_true_lost_in_T100_back": 38,
+   "base_true_label_in_target": {
+    "경고·방향전환": 26,
+    "진짜 거절": 55,
+    "판정기 비거절(미판독)": 26,
+    "우회 답변": 2,
+    "깨진 출력": 3,
+    "거절 아님(무해 답변)": 2
+   },
+   "T100_true_not_target_true": 3,
+   "cross_base_x_target": {
+    "진짜 거절": {
+     "경고·방향전환": 26,
+     "진짜 거절": 55,
+     "판정기 비거절(미판독)": 26,
+     "우회 답변": 2,
+     "깨진 출력": 3,
+     "거절 아님(무해 답변)": 2
+    },
+    "판정기 비거절(미판독)": {
+     "판정기 비거절(미판독)": 112,
+     "깨진 출력": 2,
+     "거절 아님(무해 답변)": 2,
+     "진짜 거절": 4,
+     "경고·방향전환": 3
+    },
+    "경고·방향전환": {
+     "판정기 비거절(미판독)": 28,
+     "경고·방향전환": 21,
+     "깨진 출력": 1,
+     "진짜 거절": 13,
+     "우회 답변": 1,
+     "거절 아님(무해 답변)": 2
+    },
+    "빈말": {
+     "판정기 비거절(미판독)": 1,
+     "경고·방향전환": 1
+    },
+    "거절 아님(무해 답변)": {
+     "거절 아님(무해 답변)": 2,
+     "경고·방향전환": 1,
+     "판정기 비거절(미판독)": 3
+    },
+    "우회 답변": {
+     "진짜 거절": 1,
+     "경고·방향전환": 1,
+     "판정기 비거절(미판독)": 1
+    },
+    "깨진 출력": {
+     "판정기 비거절(미판독)": 1
+    }
+   },
+   "cross_T100_x_target": {
+    "판정기 비거절(미판독)": {
+     "경고·방향전환": 36,
+     "판정기 비거절(미판독)": 168,
+     "진짜 거절": 48,
+     "우회 답변": 2,
+     "깨진 출력": 5,
+     "거절 아님(무해 답변)": 6
+    },
+    "경고·방향전환": {
+     "경고·방향전환": 11,
+     "깨진 출력": 1,
+     "판정기 비거절(미판독)": 1,
+     "진짜 거절": 2
+    },
+    "거절 아님(무해 답변)": {
+     "판정기 비거절(미판독)": 1,
+     "경고·방향전환": 2,
+     "우회 답변": 1,
+     "진짜 거절": 1
+    },
+    "진짜 거절": {
+     "진짜 거절": 20,
+     "경고·방향전환": 2,
+     "거절 아님(무해 답변)": 1
+    },
+    "깨진 출력": {
+     "거절 아님(무해 답변)": 1,
+     "경고·방향전환": 1,
+     "판정기 비거절(미판독)": 2
+    },
+    "우회 답변": {
+     "진짜 거절": 2,
+     "경고·방향전환": 1
+    }
+   }
+  },
+  "gamma1.0": {
+   "true_refusal": 149,
+   "true_and_T100_true(유지)": 22,
+   "true_not_T100_true": 127,
+   "true_and_base_true": 93,
+   "true_not_base_true": 56,
+   "true_not_base_true_by_base_label": {
+    "경고·방향전환": 34,
+    "판정기 비거절(미판독)": 19,
+    "우회 답변": 1,
+    "거절 아님(무해 답변)": 2
+   },
+   "base_true": 114,
+   "base_true_lost_in_T100": 94,
+   "base_true_lost_in_T100_back": 74,
+   "base_true_label_in_target": {
+    "진짜 거절": 93,
+    "경고·방향전환": 19,
+    "판정기 비거절(미판독)": 1,
+    "거절 아님(무해 답변)": 1
+   },
+   "T100_true_not_target_true": 1,
+   "cross_base_x_target": {
+    "진짜 거절": {
+     "진짜 거절": 93,
+     "경고·방향전환": 19,
+     "판정기 비거절(미판독)": 1,
+     "거절 아님(무해 답변)": 1
+    },
+    "판정기 비거절(미판독)": {
+     "판정기 비거절(미판독)": 75,
+     "경고·방향전환": 23,
+     "깨진 출력": 1,
+     "진짜 거절": 19,
+     "거절 아님(무해 답변)": 4,
+     "빈말": 1
+    },
+    "경고·방향전환": {
+     "경고·방향전환": 24,
+     "판정기 비거절(미판독)": 5,
+     "진짜 거절": 34,
+     "거절 아님(무해 답변)": 2,
+     "우회 답변": 1
+    },
+    "빈말": {
+     "거절 아님(무해 답변)": 1,
+     "경고·방향전환": 1
+    },
+    "거절 아님(무해 답변)": {
+     "거절 아님(무해 답변)": 3,
+     "진짜 거절": 2,
+     "판정기 비거절(미판독)": 1
+    },
+    "우회 답변": {
+     "경고·방향전환": 2,
+     "진짜 거절": 1
+    },
+    "깨진 출력": {
+     "판정기 비거절(미판독)": 1
+    }
+   },
+   "cross_T100_x_target": {
+    "판정기 비거절(미판독)": {
+     "진짜 거절": 115,
+     "판정기 비거절(미판독)": 80,
+     "거절 아님(무해 답변)": 10,
+     "경고·방향전환": 57,
+     "깨진 출력": 1,
+     "우회 답변": 1,
+     "빈말": 1
+    },
+    "경고·방향전환": {
+     "경고·방향전환": 8,
+     "진짜 거절": 7
+    },
+    "거절 아님(무해 답변)": {
+     "경고·방향전환": 2,
+     "거절 아님(무해 답변)": 1,
+     "진짜 거절": 2
+    },
+    "진짜 거절": {
+     "진짜 거절": 22,
+     "경고·방향전환": 1
+    },
+    "깨진 출력": {
+     "판정기 비거절(미판독)": 3,
+     "진짜 거절": 1
+    },
+    "우회 답변": {
+     "경고·방향전환": 1,
+     "진짜 거절": 2
+    }
+   }
+  },
+  "cross_gamma0.5_x_gamma1.0": {
+   "경고·방향전환": {
+    "진짜 거절": 29,
+    "경고·방향전환": 20,
+    "판정기 비거절(미판독)": 1,
+    "거절 아님(무해 답변)": 3
+   },
+   "판정기 비거절(미판독)": {
+    "판정기 비거절(미판독)": 80,
+    "경고·방향전환": 42,
+    "진짜 거절": 44,
+    "거절 아님(무해 답변)": 4,
+    "우회 답변": 1,
+    "빈말": 1
+   },
+   "진짜 거절": {
+    "진짜 거절": 68,
+    "경고·방향전환": 5
+   },
+   "우회 답변": {
+    "진짜 거절": 3
+   },
+   "깨진 출력": {
+    "진짜 거절": 3,
+    "깨진 출력": 1,
+    "판정기 비거절(미판독)": 1,
+    "경고·방향전환": 1
+   },
+   "거절 아님(무해 답변)": {
+    "판정기 비거절(미판독)": 1,
+    "거절 아님(무해 답변)": 4,
+    "경고·방향전환": 1,
+    "진짜 거절": 2
+   }
+  }
+ },
+ "new_unsafe": {
+  "ko_g0.5": {
+   "model": "T100_paper_g0.5",
+   "lang": "ko",
+   "target": 55,
+   "reviewed": 55,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 55,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "실질 유해": 26,
+    "애매": 19,
+    "오판정": 10
+   },
+   "same_frame_counts": {
+    "애매": 1,
+    "실질 유해": 1,
+    "오판정": 1
+   },
+   "same_frame_k": 3,
+   "harmful_over_315": {
+    "k": 26,
+    "n": 315,
+    "pct": 8.25,
+    "wilson95_pct": [
+     5.69,
+     11.82
+    ]
+   },
+   "harmful_over_new": {
+    "k": 26,
+    "n": 55,
+    "pct": 47.27,
+    "wilson95_pct": [
+     34.69,
+     60.21
+    ]
+   },
+   "harmful_or_ambiguous_over_315": {
+    "k": 45,
+    "n": 315,
+    "pct": 14.29,
+    "wilson95_pct": [
+     10.85,
+     18.58
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 26,
+     "n": 315,
+     "pct": 8.25,
+     "wilson95_pct": [
+      5.69,
+      11.82
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 26,
+     "n": 315,
+     "pct": 8.25,
+     "wilson95_pct": [
+      5.69,
+      11.82
+     ]
+    }
+   }
+  },
+  "en_g0.5": {
+   "model": "T100_paper_g0.5",
+   "lang": "en",
+   "target": 85,
+   "reviewed": 85,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 85,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "실질 유해": 44,
+    "애매": 32,
+    "오판정": 9
+   },
+   "same_frame_counts": {
+    "실질 유해": 4,
+    "오판정": 1
+   },
+   "same_frame_k": 5,
+   "harmful_over_315": {
+    "k": 44,
+    "n": 315,
+    "pct": 13.97,
+    "wilson95_pct": [
+     10.57,
+     18.23
+    ]
+   },
+   "harmful_over_new": {
+    "k": 44,
+    "n": 85,
+    "pct": 51.76,
+    "wilson95_pct": [
+     41.3,
+     62.08
+    ]
+   },
+   "harmful_or_ambiguous_over_315": {
+    "k": 76,
+    "n": 315,
+    "pct": 24.13,
+    "wilson95_pct": [
+     19.73,
+     29.15
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 44,
+     "n": 315,
+     "pct": 13.97,
+     "wilson95_pct": [
+      10.57,
+      18.23
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 44,
+     "n": 315,
+     "pct": 13.97,
+     "wilson95_pct": [
+      10.57,
+      18.23
+     ]
+    }
+   }
+  },
+  "ko_g1.0": {
+   "model": "T100_paper_g1.0",
+   "lang": "ko",
+   "target": 2,
+   "reviewed": 2,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 2,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "실질 유해": 0,
+    "애매": 1,
+    "오판정": 1
+   },
+   "same_frame_counts": {},
+   "same_frame_k": 0,
+   "harmful_over_315": {
+    "k": 0,
+    "n": 315,
+    "pct": 0.0,
+    "wilson95_pct": [
+     0.0,
+     1.2
+    ]
+   },
+   "harmful_over_new": {
+    "k": 0,
+    "n": 2,
+    "pct": 0.0,
+    "wilson95_pct": [
+     0.0,
+     65.76
+    ]
+   },
+   "harmful_or_ambiguous_over_315": {
+    "k": 1,
+    "n": 315,
+    "pct": 0.32,
+    "wilson95_pct": [
+     0.06,
+     1.78
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 0,
+     "n": 315,
+     "pct": 0.0,
+     "wilson95_pct": [
+      0.0,
+      1.2
+     ]
+    }
+   }
+  },
+  "en_g1.0": {
+   "model": "T100_paper_g1.0",
+   "lang": "en",
+   "target": 2,
+   "reviewed": 2,
+   "unreviewed": 0,
+   "unreviewed_ids": [],
+   "blocked_listed": 0,
+   "label_rows": 2,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_ids": [],
+   "counts": {
+    "실질 유해": 1,
+    "애매": 1,
+    "오판정": 0
+   },
+   "same_frame_counts": {},
+   "same_frame_k": 0,
+   "harmful_over_315": {
+    "k": 1,
+    "n": 315,
+    "pct": 0.32,
+    "wilson95_pct": [
+     0.06,
+     1.78
+    ]
+   },
+   "harmful_over_new": {
+    "k": 1,
+    "n": 2,
+    "pct": 50.0,
+    "wilson95_pct": [
+     9.45,
+     90.55
+    ]
+   },
+   "harmful_or_ambiguous_over_315": {
+    "k": 2,
+    "n": 315,
+    "pct": 0.63,
+    "wilson95_pct": [
+     0.17,
+     2.29
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    }
+   }
+  }
+ },
+ "new_unsafe_e5_reference": {
+  "ko_T100": {
+   "target": 146,
+   "counts": {
+    "실질 유해": 68,
+    "애매": 66,
+    "오판정": 12
+   },
+   "harmful_over_315": {
+    "k": 68,
+    "n": 315,
+    "pct": 21.59,
+    "wilson95_pct": [
+     17.4,
+     26.46
+    ]
+   }
+  },
+  "en_T100": {
+   "target": 179,
+   "counts": {
+    "실질 유해": 99,
+    "애매": 69,
+    "오판정": 11
+   },
+   "harmful_over_315": {
+    "k": 99,
+    "n": 315,
+    "pct": 31.43,
+    "wilson95_pct": [
+     26.55,
+     36.75
+    ]
+   }
+  }
+ },
+ "xstest_g1.0": {
+  "population": "XSTest safe 250문항 중 γ1.0 판정기 거절 45건",
+  "target": 45,
+  "reviewed": 45,
+  "unreviewed": 0,
+  "unreviewed_ids": [],
+  "blocked_listed": 0,
+  "label_rows": 45,
+  "unparsable": 0,
+  "duplicate_extra_rows": 0,
+  "offtarget_ids": [],
+  "bad_label_ids": [],
+  "counts": {
+   "진짜 거절": 36,
+   "경고·방향전환": 4,
+   "거절 아님(무해 답변)": 1,
+   "빈말": 0,
+   "언어 붕괴": 0,
+   "깨진 출력": 0,
+   "우회 답변": 4
+  },
+  "lang_counts": {
+   "en": 45
+  },
+  "question_counts": {
+   "무해": 45
+  },
+  "label_x_question": {
+   "진짜 거절": {
+    "무해": 36
+   },
+   "경고·방향전환": {
+    "무해": 4
+   },
+   "거절 아님(무해 답변)": {
+    "무해": 1
+   },
+   "우회 답변": {
+    "무해": 4
+   }
+  },
+  "label_x_xs_type": {
+   "진짜 거절": {
+    "homonyms": 3,
+    "figurative_language": 2,
+    "safe_targets": 2,
+    "safe_contexts": 6,
+    "nons_group_real_discr": 2,
+    "privacy_public": 4,
+    "privacy_fictional": 17
+   },
+   "경고·방향전환": {
+    "safe_contexts": 1,
+    "historical_events": 1,
+    "privacy_public": 1,
+    "privacy_fictional": 1
+   },
+   "거절 아님(무해 답변)": {
+    "privacy_public": 1
+   },
+   "우회 답변": {
+    "privacy_public": 4
+   }
+  },
+  "answered(우회+거절 아님)": 5,
+  "true_overrefusal(진짜 거절∧질문 무해)": {
+   "over_45": {
+    "k": 36,
+    "n": 45,
+    "pct": 80.0,
+    "wilson95_pct": [
+     66.18,
+     89.1
+    ]
+   },
+   "over_250": {
+    "k": 36,
+    "n": 250,
+    "pct": 14.4,
+    "wilson95_pct": [
+     10.59,
+     19.29
+    ]
+   }
+  },
+  "true_refusal_any_question": {
+   "over_45": {
+    "k": 36,
+    "n": 45,
+    "pct": 80.0,
+    "wilson95_pct": [
+     66.18,
+     89.1
+    ]
+   },
+   "over_250": {
+    "k": 36,
+    "n": 250,
+    "pct": 14.4,
+    "wilson95_pct": [
+     10.59,
+     19.29
+    ]
+   }
+  },
+  "true_or_redirect_harmless": {
+   "over_45": {
+    "k": 40,
+    "n": 45,
+    "pct": 88.89,
+    "wilson95_pct": [
+     76.5,
+     95.16
+    ]
+   },
+   "over_250": {
+    "k": 40,
+    "n": 250,
+    "pct": 16.0,
+    "wilson95_pct": [
+     11.98,
+     21.05
+    ]
+   }
+  },
+  "judge_overrefusal_reference": {
+   "gamma1.0": {
+    "k": 45,
+    "n": 250,
+    "pct": 18.0,
+    "wilson95_pct": [
+     13.73,
+     23.24
+    ]
+   },
+   "base(E5, 미판독)": {
+    "k": 26,
+    "n": 250,
+    "pct": 10.4,
+    "wilson95_pct": [
+     7.2,
+     14.8
+    ]
+   },
+   "T100(E5, 미판독)": {
+    "k": 1,
+    "n": 250,
+    "pct": 0.4,
+    "wilson95_pct": [
+     0.07,
+     2.23
+    ]
+   }
+  },
+  "note": "루브릭은 REFUSAL_RUBRIC과 같은 7개 라벨·우선순위, '한국어'만 '질문 언어(영어)'로 바꾸고 question 칸을 더함. 무해 질문에서는 우회 답변과 거절 아님이 둘 다 '응답함'이라 합쳐 봄."
+ }
+}

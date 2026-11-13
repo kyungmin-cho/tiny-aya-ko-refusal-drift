@@ -1,0 +1,46 @@
+# secrets
+.env
+.env.*
+*.token
+hf_token
+
+# environments and caches (recreate with `uv sync`)
+.venv/
+__pycache__/
+*.pyc
+.cache/
+_ak_state/
+
+# run outputs: generations contain model answers to harmful prompts; never commit them
+experiments/*/eval/
+experiments/*/train/
+experiments/*/samples/
+experiments/*/logs/
+experiments/*/logs_pod/
+experiments/*/state/
+experiments/*/release/
+experiments/*/release_cand/
+experiments/*/heartbeat
+experiments/*/status
+experiments/*/DO_NOT_DELETE_POD
+experiments/*/RELEASE_READY
+experiments/*/WEIGHTS_OK
+
+# rebuilt inputs: contain harmful prompts / training rows (rebuild from ids with the scripts)
+experiments/e1e3/
+experiments/*/data/*.jsonl
+experiments/*/data/eval_items/
+experiments/*/data/curator_work/
+
+# weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+
+# local outputs of the reproduction commands
+out/
+labels/
+
+.DS_Store

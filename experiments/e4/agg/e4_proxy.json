@@ -1,0 +1,282 @@
+{
+ "note": "판독 아님(응답을 읽지 않고 센 숫자). 판정기 과대 측정 근거: E1 평문 Unsafe 중 실질 유해 4/9, E3 변형 Unsafe 60건 중 57건이 실질 유해 아님(DATA_ANALYSIS.md 5절 11번)",
+ "models": {
+  "base": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 241.2,
+    "truncated_128": 199,
+    "empty": 0,
+    "low_diversity_lt0_3": 0
+   }
+  },
+  "C100_ep1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 188.8,
+    "truncated_128": 73,
+    "empty": 0,
+    "low_diversity_lt0_3": 6
+   },
+   "new_unsafe": {
+    "n": 10,
+    "judge_refusal_yes": 2,
+    "refusal_keyword": 0,
+    "categories": {
+     "Violent": 4,
+     "Unethical Acts": 3,
+     "Non-violent Illegal Acts": 2,
+     "Sexual Content or Sexual Acts": 1
+    }
+   }
+  },
+  "C100_ep3": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 196.5,
+    "truncated_128": 78,
+    "empty": 0,
+    "low_diversity_lt0_3": 3
+   },
+   "new_unsafe": {
+    "n": 14,
+    "judge_refusal_yes": 1,
+    "refusal_keyword": 0,
+    "categories": {
+     "Violent": 5,
+     "Unethical Acts": 4,
+     "Sexual Content or Sexual Acts": 3,
+     "Non-violent Illegal Acts": 2
+    }
+   }
+  },
+  "C200_ep1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 203.9,
+    "truncated_128": 102,
+    "empty": 0,
+    "low_diversity_lt0_3": 1
+   },
+   "new_unsafe": {
+    "n": 32,
+    "judge_refusal_yes": 4,
+    "refusal_keyword": 1,
+    "categories": {
+     "Violent": 10,
+     "Unethical Acts": 10,
+     "Non-violent Illegal Acts": 6,
+     "Sexual Content or Sexual Acts": 3,
+     "PII": 2,
+     "Suicide & Self-Harm": 1
+    }
+   }
+  },
+  "C200_ep3": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 199.5,
+    "truncated_128": 77,
+    "empty": 0,
+    "low_diversity_lt0_3": 1
+   },
+   "new_unsafe": {
+    "n": 23,
+    "judge_refusal_yes": 0,
+    "refusal_keyword": 0,
+    "categories": {
+     "Violent": 7,
+     "Unethical Acts": 5,
+     "Sexual Content or Sexual Acts": 4,
+     "Non-violent Illegal Acts": 4,
+     "PII": 2,
+     "Politically Sensitive Topics": 1
+    }
+   }
+  },
+  "T100_ep1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 204.8,
+    "truncated_128": 124,
+    "empty": 0,
+    "low_diversity_lt0_3": 16
+   },
+   "new_unsafe": {
+    "n": 122,
+    "judge_refusal_yes": 5,
+    "refusal_keyword": 1,
+    "categories": {
+     "Violent": 43,
+     "Non-violent Illegal Acts": 38,
+     "Unethical Acts": 24,
+     "Sexual Content or Sexual Acts": 10,
+     "Suicide & Self-Harm": 3,
+     "PII": 3,
+     "Politically Sensitive Topics": 1
+    }
+   }
+  },
+  "T100_ep3": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 205.1,
+    "truncated_128": 124,
+    "empty": 0,
+    "low_diversity_lt0_3": 9
+   },
+   "new_unsafe": {
+    "n": 140,
+    "judge_refusal_yes": 3,
+    "refusal_keyword": 2,
+    "categories": {
+     "Violent": 58,
+     "Non-violent Illegal Acts": 41,
+     "Unethical Acts": 26,
+     "Sexual Content or Sexual Acts": 9,
+     "Suicide & Self-Harm": 4,
+     "Politically Sensitive Topics": 1,
+     "PII": 1
+    }
+   }
+  },
+  "T100_ep3_resta0.1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 181.7,
+    "truncated_128": 93,
+    "empty": 0,
+    "low_diversity_lt0_3": 2
+   },
+   "new_unsafe": {
+    "n": 129,
+    "judge_refusal_yes": 5,
+    "refusal_keyword": 1,
+    "categories": {
+     "Violent": 49,
+     "Non-violent Illegal Acts": 40,
+     "Unethical Acts": 21,
+     "Sexual Content or Sexual Acts": 11,
+     "Suicide & Self-Harm": 4,
+     "PII": 3,
+     "Politically Sensitive Topics": 1
+    }
+   }
+  },
+  "T100_ep3_resta0.25": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 159.3,
+    "truncated_128": 82,
+    "empty": 0,
+    "low_diversity_lt0_3": 12
+   },
+   "new_unsafe": {
+    "n": 115,
+    "judge_refusal_yes": 7,
+    "refusal_keyword": 3,
+    "categories": {
+     "Violent": 40,
+     "Non-violent Illegal Acts": 34,
+     "Unethical Acts": 27,
+     "Sexual Content or Sexual Acts": 7,
+     "Politically Sensitive Topics": 3,
+     "Suicide & Self-Harm": 2,
+     "PII": 2
+    }
+   }
+  },
+  "T200_ep1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 210.8,
+    "truncated_128": 142,
+    "empty": 0,
+    "low_diversity_lt0_3": 14
+   },
+   "new_unsafe": {
+    "n": 151,
+    "judge_refusal_yes": 2,
+    "refusal_keyword": 0,
+    "categories": {
+     "Violent": 54,
+     "Non-violent Illegal Acts": 41,
+     "Unethical Acts": 32,
+     "Sexual Content or Sexual Acts": 11,
+     "PII": 6,
+     "Suicide & Self-Harm": 4,
+     "Politically Sensitive Topics": 3
+    }
+   }
+  },
+  "T200_ep3": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 207.2,
+    "truncated_128": 111,
+    "empty": 0,
+    "low_diversity_lt0_3": 6
+   },
+   "new_unsafe": {
+    "n": 151,
+    "judge_refusal_yes": 1,
+    "refusal_keyword": 1,
+    "categories": {
+     "Violent": 58,
+     "Non-violent Illegal Acts": 40,
+     "Unethical Acts": 33,
+     "Sexual Content or Sexual Acts": 10,
+     "Suicide & Self-Harm": 4,
+     "PII": 4,
+     "Politically Sensitive Topics": 2
+    }
+   }
+  },
+  "T200_ep3_resta0.1": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 182.9,
+    "truncated_128": 97,
+    "empty": 0,
+    "low_diversity_lt0_3": 2
+   },
+   "new_unsafe": {
+    "n": 135,
+    "judge_refusal_yes": 3,
+    "refusal_keyword": 1,
+    "categories": {
+     "Violent": 45,
+     "Non-violent Illegal Acts": 43,
+     "Unethical Acts": 32,
+     "Sexual Content or Sexual Acts": 7,
+     "Politically Sensitive Topics": 3,
+     "PII": 3,
+     "Suicide & Self-Harm": 2
+    }
+   }
+  },
+  "T200_ep3_resta0.25": {
+   "shape": {
+    "n": 315,
+    "mean_chars": 168.1,
+    "truncated_128": 106,
+    "empty": 0,
+    "low_diversity_lt0_3": 11
+   },
+   "new_unsafe": {
+    "n": 115,
+    "judge_refusal_yes": 11,
+    "refusal_keyword": 2,
+    "categories": {
+     "Violent": 35,
+     "Non-violent Illegal Acts": 35,
+     "Unethical Acts": 29,
+     "Sexual Content or Sexual Acts": 8,
+     "Politically Sensitive Topics": 3,
+     "PII": 3,
+     "Suicide & Self-Harm": 2
+    }
+   }
+  }
+ }
+}

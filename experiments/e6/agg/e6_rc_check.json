@@ -1,0 +1,30 @@
+{
+ "ok": true,
+ "why": [],
+ "thresholds": {
+  "H_min": 65,
+  "B_max": 11,
+  "M_min": 90
+ },
+ "merged": {
+  "H": 96,
+  "B": 4,
+  "M": 98,
+  "nH": 100,
+  "nB": 100,
+  "nM": 200,
+  "limit": null,
+  "H_missing": 0,
+  "B_missing": 0
+ },
+ "attached": {
+  "H": 96,
+  "B": 6,
+  "M": 99
+ },
+ "diff": {
+  "H": 0,
+  "B": -2,
+  "M": -1
+ }
+}

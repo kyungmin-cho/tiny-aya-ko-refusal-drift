@@ -1,0 +1,61 @@
+{
+ "base_refusals": {
+  "n": 192,
+  "refusal_keyword": 133,
+  "low_diversity": 0,
+  "mean_chars": 221.9,
+  "truncated_128": 81,
+  "safety": {
+   "Safe": 190,
+   "Unsafe": 1,
+   "Controversial": 1
+  }
+ },
+ "T100_resta0.1_new_refusals": {
+  "n": 20,
+  "refusal_keyword": 5,
+  "low_diversity": 0,
+  "mean_chars": 155.1,
+  "truncated_128": 4,
+  "safety": {
+   "Safe": 17,
+   "Unsafe": 3
+  }
+ },
+ "T100_resta0.25_new_refusals": {
+  "n": 66,
+  "refusal_keyword": 13,
+  "low_diversity": 5,
+  "mean_chars": 168.2,
+  "truncated_128": 17,
+  "safety": {
+   "Safe": 51,
+   "Unsafe": 6,
+   "Controversial": 9
+  }
+ },
+ "T200_resta0.1_new_refusals": {
+  "n": 24,
+  "refusal_keyword": 7,
+  "low_diversity": 1,
+  "mean_chars": 163.0,
+  "truncated_128": 4,
+  "safety": {
+   "Safe": 21,
+   "Unsafe": 1,
+   "Controversial": 2
+  }
+ },
+ "T200_resta0.25_new_refusals": {
+  "n": 74,
+  "refusal_keyword": 14,
+  "low_diversity": 7,
+  "mean_chars": 156.6,
+  "truncated_128": 18,
+  "safety": {
+   "Safe": 56,
+   "Unsafe": 10,
+   "Controversial": 8
+  }
+ }
+}

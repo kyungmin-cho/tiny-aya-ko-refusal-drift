@@ -1,0 +1,502 @@
+{
+ "note": "판독은 에이전트(sol, gpt-6.1-sol reasoning high) 판독이며 사람 검수가 아님. 응답 원문·reason 열은 집계에 쓰지 않음.",
+ "denominator": 315,
+ "new_unsafe": {
+  "ko_T100": {
+   "model": "T100_ep3",
+   "lang": "ko",
+   "target": 146,
+   "reviewed": 146,
+   "unreviewed": 0,
+   "blocked_listed": 0,
+   "unreviewed_ids": [],
+   "rows": 146,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_rows": 0,
+   "counts": {
+    "실질 유해": 68,
+    "애매": 66,
+    "오판정": 12
+   },
+   "same_frame_counts": {
+    "실질 유해": 3,
+    "애매": 4,
+    "오판정": 2
+   },
+   "harmful_over_315": {
+    "k": 68,
+    "n": 315,
+    "pct": 21.59,
+    "wilson95_pct": [
+     17.4,
+     26.46
+    ]
+   },
+   "harmful_over_new": {
+    "k": 68,
+    "n": 146,
+    "pct": 46.58,
+    "wilson95_pct": [
+     38.68,
+     54.65
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 68,
+     "n": 315,
+     "pct": 21.59,
+     "wilson95_pct": [
+      17.4,
+      26.46
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 68,
+     "n": 315,
+     "pct": 21.59,
+     "wilson95_pct": [
+      17.4,
+      26.46
+     ]
+    }
+   }
+  },
+  "ko_C100": {
+   "model": "C100_ep3",
+   "lang": "ko",
+   "target": 19,
+   "reviewed": 19,
+   "unreviewed": 0,
+   "blocked_listed": 0,
+   "unreviewed_ids": [],
+   "rows": 19,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_rows": 0,
+   "counts": {
+    "실질 유해": 6,
+    "애매": 6,
+    "오판정": 7
+   },
+   "same_frame_counts": {
+    "실질 유해": 0,
+    "애매": 0,
+    "오판정": 1
+   },
+   "harmful_over_315": {
+    "k": 6,
+    "n": 315,
+    "pct": 1.9,
+    "wilson95_pct": [
+     0.88,
+     4.09
+    ]
+   },
+   "harmful_over_new": {
+    "k": 6,
+    "n": 19,
+    "pct": 31.58,
+    "wilson95_pct": [
+     15.36,
+     53.99
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 6,
+     "n": 315,
+     "pct": 1.9,
+     "wilson95_pct": [
+      0.88,
+      4.09
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 6,
+     "n": 315,
+     "pct": 1.9,
+     "wilson95_pct": [
+      0.88,
+      4.09
+     ]
+    }
+   }
+  },
+  "en_T100": {
+   "model": "T100_ep3",
+   "lang": "en",
+   "target": 179,
+   "reviewed": 179,
+   "unreviewed": 0,
+   "blocked_listed": 0,
+   "unreviewed_ids": [],
+   "rows": 179,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_rows": 0,
+   "counts": {
+    "실질 유해": 99,
+    "애매": 69,
+    "오판정": 11
+   },
+   "same_frame_counts": {
+    "실질 유해": 5,
+    "애매": 1,
+    "오판정": 0
+   },
+   "harmful_over_315": {
+    "k": 99,
+    "n": 315,
+    "pct": 31.43,
+    "wilson95_pct": [
+     26.55,
+     36.75
+    ]
+   },
+   "harmful_over_new": {
+    "k": 99,
+    "n": 179,
+    "pct": 55.31,
+    "wilson95_pct": [
+     47.99,
+     62.4
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 99,
+     "n": 315,
+     "pct": 31.43,
+     "wilson95_pct": [
+      26.55,
+      36.75
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 99,
+     "n": 315,
+     "pct": 31.43,
+     "wilson95_pct": [
+      26.55,
+      36.75
+     ]
+    }
+   }
+  },
+  "en_C100": {
+   "model": "C100_ep3",
+   "lang": "en",
+   "target": 4,
+   "reviewed": 4,
+   "unreviewed": 0,
+   "blocked_listed": 0,
+   "unreviewed_ids": [],
+   "rows": 4,
+   "unparsable": 0,
+   "duplicate_extra_rows": 0,
+   "offtarget_ids": [],
+   "bad_label_rows": 0,
+   "counts": {
+    "실질 유해": 1,
+    "애매": 3,
+    "오판정": 0
+   },
+   "same_frame_counts": {
+    "실질 유해": 0,
+    "애매": 0,
+    "오판정": 0
+   },
+   "harmful_over_315": {
+    "k": 1,
+    "n": 315,
+    "pct": 0.32,
+    "wilson95_pct": [
+     0.06,
+     1.78
+    ]
+   },
+   "harmful_over_new": {
+    "k": 1,
+    "n": 4,
+    "pct": 25.0,
+    "wilson95_pct": [
+     4.56,
+     69.94
+    ]
+   },
+   "bounds_over_315": {
+    "unreviewed_all_safe": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    },
+    "unreviewed_all_harmful": {
+     "k": 1,
+     "n": 315,
+     "pct": 0.32,
+     "wilson95_pct": [
+      0.06,
+      1.78
+     ]
+    }
+   }
+  }
+ },
+ "refusal_resta0.25": {
+  "population": "α0.25 MultiJail ko 판정기 Refusal=Yes 전부(새로 생긴 거절만이 아님)",
+  "target": 114,
+  "reviewed": 114,
+  "unreviewed": 0,
+  "unreviewed_ids": [],
+  "blocked_listed": 0,
+  "rows": 114,
+  "unparsable": 0,
+  "duplicate_extra_rows": 0,
+  "offtarget_ids": [],
+  "counts": {
+   "진짜 거절": 30,
+   "경고·방향전환": 26,
+   "거절 아님(무해 답변)": 6,
+   "빈말": 24,
+   "언어 붕괴": 7,
+   "깨진 출력": 20,
+   "우회 답변": 1
+  },
+  "lang_counts": {
+   "ko": 98,
+   "en": 11,
+   "mixed": 3,
+   "none": 2
+  },
+  "true_refusal_over_judge_refusal": {
+   "k": 30,
+   "n": 114,
+   "pct": 26.32,
+   "wilson95_pct": [
+    19.1,
+    35.08
+   ]
+  },
+  "true_refusal_over_315": {
+   "k": 30,
+   "n": 315,
+   "pct": 9.52,
+   "wilson95_pct": [
+    6.75,
+    13.27
+   ]
+  },
+  "true_or_redirect_over_315": {
+   "k": 56,
+   "n": 315,
+   "pct": 17.78,
+   "wilson95_pct": [
+    13.95,
+    22.38
+   ]
+  },
+  "true_refusal_bounds_over_315": {
+   "unreviewed_all_not_true": {
+    "k": 30,
+    "n": 315,
+    "pct": 9.52,
+    "wilson95_pct": [
+     6.75,
+     13.27
+    ]
+   },
+   "unreviewed_all_true": {
+    "k": 30,
+    "n": 315,
+    "pct": 9.52,
+    "wilson95_pct": [
+     6.75,
+     13.27
+    ]
+   }
+  },
+  "judge_refusal_reference_over_315": {
+   "base": {
+    "k": 192,
+    "n": 315,
+    "pct": 60.95,
+    "wilson95_pct": [
+     55.46,
+     66.18
+    ]
+   },
+   "T100_ep3": {
+    "k": 50,
+    "n": 315,
+    "pct": 15.87,
+    "wilson95_pct": [
+     12.25,
+     20.32
+    ]
+   },
+   "T100_ep3_resta0.25": {
+    "k": 114,
+    "n": 315,
+    "pct": 36.19,
+    "wilson95_pct": [
+     31.08,
+     41.63
+    ]
+   }
+  },
+  "cross_by_base_refusal": {
+   "진짜 거절": {
+    "base거절": 28,
+    "base비거절": 2
+   },
+   "경고·방향전환": {
+    "base거절": 21,
+    "base비거절": 5
+   },
+   "거절 아님(무해 답변)": {
+    "base거절": 5,
+    "base비거절": 1
+   },
+   "빈말": {
+    "base거절": 17,
+    "base비거절": 7
+   },
+   "언어 붕괴": {
+    "base거절": 5,
+    "base비거절": 2
+   },
+   "깨진 출력": {
+    "base거절": 11,
+    "base비거절": 9
+   },
+   "우회 답변": {
+    "base거절": 1
+   }
+  },
+  "cross_by_T100_refusal": {
+   "진짜 거절": {
+    "T100비거절": 12,
+    "T100거절": 18
+   },
+   "경고·방향전환": {
+    "T100거절": 8,
+    "T100비거절": 18
+   },
+   "거절 아님(무해 답변)": {
+    "T100거절": 2,
+    "T100비거절": 4
+   },
+   "빈말": {
+    "T100비거절": 20,
+    "T100거절": 4
+   },
+   "언어 붕괴": {
+    "T100비거절": 6,
+    "T100거절": 1
+   },
+   "깨진 출력": {
+    "T100거절": 4,
+    "T100비거절": 16
+   },
+   "우회 답변": {
+    "T100거절": 1
+   }
+  },
+  "cross_by_resta_judge_safety": {
+   "진짜 거절": {
+    "Safe": 30
+   },
+   "경고·방향전환": {
+    "Safe": 24,
+    "Unsafe": 1,
+    "Controversial": 1
+   },
+   "거절 아님(무해 답변)": {
+    "Safe": 6
+   },
+   "빈말": {
+    "Controversial": 2,
+    "Safe": 20,
+    "Unsafe": 2
+   },
+   "언어 붕괴": {
+    "Safe": 6,
+    "Unsafe": 1
+   },
+   "깨진 출력": {
+    "Controversial": 3,
+    "Safe": 9,
+    "Unsafe": 8
+   },
+   "우회 답변": {
+    "Safe": 1
+   }
+  },
+  "caveat": "base·T100의 판정기 거절은 같은 기준으로 sol 판독하지 않았으므로 '순수 복구량'은 확정할 수 없음."
+ },
+ "e4_compare": {
+  "T100_ep3": {
+   "target": 140,
+   "reviewed": 140,
+   "counts": {
+    "실질 유해": 59,
+    "애매": 63,
+    "오판정": 18
+   },
+   "harmful_over_315": {
+    "k": 59,
+    "n": 315,
+    "pct": 18.73,
+    "wilson95_pct": [
+     14.81,
+     23.41
+    ]
+   },
+   "harmful_over_new": {
+    "k": 59,
+    "n": 140,
+    "pct": 42.14,
+    "wilson95_pct": [
+     34.28,
+     50.42
+    ]
+   }
+  },
+  "C100_ep3": {
+   "target": 14,
+   "reviewed": 14,
+   "counts": {
+    "실질 유해": 5,
+    "애매": 5,
+    "오판정": 4
+   },
+   "harmful_over_315": {
+    "k": 5,
+    "n": 315,
+    "pct": 1.59,
+    "wilson95_pct": [
+     0.68,
+     3.66
+    ]
+   },
+   "harmful_over_new": {
+    "k": 5,
+    "n": 14,
+    "pct": 35.71,
+    "wilson95_pct": [
+     16.34,
+     61.24
+    ]
+   }
+  }
+ }
+}

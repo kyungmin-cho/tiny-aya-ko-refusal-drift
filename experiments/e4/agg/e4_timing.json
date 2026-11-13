@@ -1,0 +1,295 @@
+{
+ "orchestrator_first_event": "2026-11-12T09:35:37+09:00",
+ "orchestrator_last_event": "2026-11-12T12:53:44+09:00",
+ "orchestrator_wall_min": 198.1,
+ "step_sum_min": 197.6,
+ "steps": {
+  "preflight": {
+   "start": "2026-11-12T12:45:55+09:00",
+   "end": "2026-11-12T12:45:55+09:00",
+   "sec": 0.0,
+   "ok": true,
+   "est_min": 0.0
+  },
+  "train_T100": {
+   "start": "2026-11-12T09:35:37+09:00",
+   "end": "2026-11-12T10:10:21+09:00",
+   "sec": 2084.7,
+   "ok": true,
+   "est_min": 34.4
+  },
+  "train_C100": {
+   "start": "2026-11-12T10:10:21+09:00",
+   "end": "2026-11-12T10:44:53+09:00",
+   "sec": 2071.2,
+   "ok": true,
+   "est_min": 34.4
+  },
+  "eval_base": {
+   "start": "2026-11-12T10:44:53+09:00",
+   "end": "2026-11-12T10:48:35+09:00",
+   "sec": 222.4,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_T100_ep3": {
+   "start": "2026-11-12T10:48:35+09:00",
+   "end": "2026-11-12T10:52:28+09:00",
+   "sec": 232.7,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_C100_ep3": {
+   "start": "2026-11-12T10:52:28+09:00",
+   "end": "2026-11-12T10:56:17+09:00",
+   "sec": 229.3,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_T100_ep1": {
+   "start": "2026-11-12T10:56:17+09:00",
+   "end": "2026-11-12T11:00:10+09:00",
+   "sec": 232.6,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_C100_ep1": {
+   "start": "2026-11-12T11:00:10+09:00",
+   "end": "2026-11-12T11:04:01+09:00",
+   "sec": 231.8,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_T100_ep3_resta0.1": {
+   "start": "2026-11-12T11:04:01+09:00",
+   "end": "2026-11-12T11:09:20+09:00",
+   "sec": 319.1,
+   "ok": true,
+   "est_min": 7.4
+  },
+  "eval_T100_ep3_resta0.25": {
+   "start": "2026-11-12T11:09:20+09:00",
+   "end": "2026-11-12T11:14:42+09:00",
+   "sec": 321.4,
+   "ok": true,
+   "est_min": 7.4
+  },
+  "agg_A": {
+   "start": "2026-11-12T12:45:55+09:00",
+   "end": "2026-11-12T12:45:56+09:00",
+   "sec": 0.3,
+   "ok": true,
+   "est_min": 0.1
+  },
+  "train_T200": {
+   "start": "2026-11-12T11:14:42+09:00",
+   "end": "2026-11-12T11:50:51+09:00",
+   "sec": 2169.1,
+   "ok": true,
+   "est_min": 36.0
+  },
+  "train_C200": {
+   "start": "2026-11-12T11:50:51+09:00",
+   "end": "2026-11-12T12:26:59+09:00",
+   "sec": 2167.9,
+   "ok": true,
+   "est_min": 36.0
+  },
+  "eval_T200_ep3": {
+   "start": "2026-11-12T12:26:59+09:00",
+   "end": "2026-11-12T12:30:54+09:00",
+   "sec": 235.4,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_C200_ep3": {
+   "start": "2026-11-12T12:30:54+09:00",
+   "end": "2026-11-12T12:34:45+09:00",
+   "sec": 230.9,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_T200_ep3_resta0.1": {
+   "start": "2026-11-12T12:34:45+09:00",
+   "end": "2026-11-12T12:40:04+09:00",
+   "sec": 318.9,
+   "ok": true,
+   "est_min": 7.4
+  },
+  "eval_T200_ep3_resta0.25": {
+   "start": "2026-11-12T12:40:04+09:00",
+   "end": "2026-11-12T12:45:27+09:00",
+   "sec": 322.6,
+   "ok": true,
+   "est_min": 7.4
+  },
+  "agg_B": {
+   "start": "2026-11-12T12:45:56+09:00",
+   "end": "2026-11-12T12:45:56+09:00",
+   "sec": 0.3,
+   "ok": true,
+   "est_min": 0.1
+  },
+  "eval_T200_ep1": {
+   "start": "2026-11-12T12:45:56+09:00",
+   "end": "2026-11-12T12:49:52+09:00",
+   "sec": 236.3,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "eval_C200_ep1": {
+   "start": "2026-11-12T12:49:52+09:00",
+   "end": "2026-11-12T12:53:44+09:00",
+   "sec": 231.6,
+   "ok": true,
+   "est_min": 4.4
+  },
+  "agg_C": {
+   "start": "2026-11-12T12:53:44+09:00",
+   "end": "2026-11-12T12:53:44+09:00",
+   "sec": 0.3,
+   "ok": true,
+   "est_min": 0.1
+  }
+ },
+ "train": {
+  "T100": {
+   "global_steps": 1575,
+   "train_sec": 2050.5,
+   "sec_per_step": 1.3019,
+   "load_sec": 12.2,
+   "peak_mem_allocated_gb": 35.65,
+   "first_loss": 1.8584982299804687,
+   "last_loss": 1.2883155822753907,
+   "nan_losses": 0
+  },
+  "C100": {
+   "global_steps": 1575,
+   "train_sec": 2048.3,
+   "sec_per_step": 1.3005,
+   "load_sec": 12.8,
+   "peak_mem_allocated_gb": 35.65,
+   "first_loss": 1.8215628051757813,
+   "last_loss": 1.2930569458007812,
+   "nan_losses": 0
+  },
+  "T200": {
+   "global_steps": 1650,
+   "train_sec": 2145.5,
+   "sec_per_step": 1.3003,
+   "load_sec": 13.7,
+   "peak_mem_allocated_gb": 35.65,
+   "first_loss": 1.7677725219726563,
+   "last_loss": 1.3045106506347657,
+   "nan_losses": 0
+  },
+  "C200": {
+   "global_steps": 1650,
+   "train_sec": 2143.5,
+   "sec_per_step": 1.2991,
+   "load_sec": 14.1,
+   "peak_mem_allocated_gb": 35.65,
+   "first_loss": 1.7460658264160156,
+   "last_loss": 1.2937141418457032,
+   "nan_losses": 0
+  }
+ },
+ "eval": {
+  "C100_ep1": {
+   "model_build_sec": 10.6,
+   "gen_wall_sec": 143.1,
+   "judge_wall_sec": 84.1
+  },
+  "C100_ep3": {
+   "model_build_sec": 11.0,
+   "gen_wall_sec": 143.7,
+   "judge_wall_sec": 81.2
+  },
+  "C200_ep1": {
+   "model_build_sec": 10.4,
+   "gen_wall_sec": 142.7,
+   "judge_wall_sec": 84.1
+  },
+  "C200_ep3": {
+   "model_build_sec": 10.4,
+   "gen_wall_sec": 143.0,
+   "judge_wall_sec": 83.0
+  },
+  "T100_ep1": {
+   "model_build_sec": 9.2,
+   "gen_wall_sec": 141.4,
+   "judge_wall_sec": 86.6
+  },
+  "T100_ep3": {
+   "model_build_sec": 9.8,
+   "gen_wall_sec": 141.9,
+   "judge_wall_sec": 86.3
+  },
+  "T100_ep3_resta0.1": {
+   "model_build_sec": 96.7,
+   "gen_wall_sec": 229.1,
+   "judge_wall_sec": 85.7,
+   "resta_sec": 85.1
+  },
+  "T100_ep3_resta0.25": {
+   "model_build_sec": 96.6,
+   "gen_wall_sec": 229.5,
+   "judge_wall_sec": 87.2,
+   "resta_sec": 84.7
+  },
+  "T200_ep1": {
+   "model_build_sec": 10.5,
+   "gen_wall_sec": 143.4,
+   "judge_wall_sec": 88.2
+  },
+  "T200_ep3": {
+   "model_build_sec": 10.2,
+   "gen_wall_sec": 142.6,
+   "judge_wall_sec": 87.9
+  },
+  "T200_ep3_resta0.1": {
+   "model_build_sec": 96.7,
+   "gen_wall_sec": 228.9,
+   "judge_wall_sec": 85.4,
+   "resta_sec": 84.1
+  },
+  "T200_ep3_resta0.25": {
+   "model_build_sec": 98.8,
+   "gen_wall_sec": 231.2,
+   "judge_wall_sec": 86.5,
+   "resta_sec": 85.8
+  },
+  "base": {
+   "model_build_sec": 4.0,
+   "gen_wall_sec": 135.5,
+   "judge_wall_sec": 82.9
+  }
+ },
+ "rate_usd_per_h": 0.59,
+ "note": "step_sum_min = 학습·평가·집계 하위 프로세스 시간 합(GPU를 잡고 있던 시간의 측정값). 비용 = 시간 × 지시문 요금(추정)",
+ "recompute_after_T100": {
+  "t_ref": "2026-11-12T10:10:21+09:00",
+  "sec_per_step_measured": 1.3019,
+  "remaining_required_min": 168.1,
+  "predicted_end": "2026-11-12T12:58:26+09:00",
+  "steps": [
+   "train_C100",
+   "eval_base",
+   "eval_T100_ep3",
+   "eval_C100_ep3",
+   "eval_T100_ep1",
+   "eval_C100_ep1",
+   "eval_T100_ep3_resta0.1",
+   "eval_T100_ep3_resta0.25",
+   "agg_A",
+   "train_T200",
+   "train_C200",
+   "eval_T200_ep3",
+   "eval_C200_ep3",
+   "eval_T200_ep3_resta0.1",
+   "eval_T200_ep3_resta0.25",
+   "agg_B"
+  ],
+  "note": "S1 가정 중 스텝 시간만 실측으로 바꾼 재계산(추정). 실제 필수 단계 종료는 state/events.jsonl의 eval_T200_ep3_resta0.25 end"
+ }
+}
