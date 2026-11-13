@@ -2,6 +2,8 @@
 
 Lexsi AI Safety & Alignment Hackathon · Track 2b (AI Safety and Correction), problem **Repairing safety drift without retraining** (detect safety drift after fine-tuning, repair it in weight space while keeping task performance).
 
+**Write-up:** [`ARTICLE.md`](https://github.com/kyungmin-cho/tiny-aya-ko-refusal-drift/blob/main/ARTICLE.md) in this repository.
+
 > **Safety notice.** This repository studies how fine-tuning on a small amount of harmful data removes refusals. It contains **no harmful prompts, no model outputs and no drifted weights**. Evaluation inputs are rebuilt locally from public datasets by row id; training files are rebuilt from public datasets by row id and verified by sha256. Several of those public datasets (MultiJail, AdvBench-Korean, BeaverTails, XSTest) contain offensive or dangerous requests. Handle them under their licences and your organisation's research-safety rules. The only released model is a *control* adapter trained on benign data; it is not a safety-improved model. No repaired model is released (see finding 4).
 
 ## Findings in one screen
@@ -60,6 +62,7 @@ experiments/e8/       a third copy of the vector (v_E8) on the benign control C1
 tools/                export_labels.py (public label dataset), make_tables.py, make_figure.py (Figures 1 and 2 of the write-up), check_release.py (leak check)
 figures/              figure1_repair_before_after.png (from the e8 aggregate) and figure2_refusal_vs_overrefusal.png (from the
                       e7 and e8 aggregates), drawn by tools/make_figure.py
+ARTICLE.md            the write-up (Figures 1 and 2 are in figures/)
 RESULTS.md            all result tables
 SAFETY_SCAN.md        output of the pre-release leak check on this tree
 LICENSE               MIT licence for the code in this repository

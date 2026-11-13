@@ -1,6 +1,6 @@
 # Pre-release leak check (SAFETY_SCAN)
 
-Tool: `tools/check_release.py` (this repo). Date of run: 2026-11-13 (last re-run after the write-up gained a new Figure 1, drawn by the same script, and the earlier figure became Figure 2; before that after the model card's licence and access notes were finalised; before that after the repository names and links were filled in; before that after the review fixes: new path rules, the released C100 adapter weights added to the model upload folder, Figure 1 and its script; before that after the copyright line of `LICENSE` was set to the author's name; before that after adding the E8 labels and aggregates; before that after adding the E6/E7 labels and aggregates and the run-2+ agent labels; first run 2026-11-12). Scanned trees: this repository (`repo`), the Hugging Face card and dataset drafts (`hf`), and the article draft (`article`).
+Tool: `tools/check_release.py` (this repo). Date of run: 2026-11-13 (last re-run after the write-up was added to this repository as `ARTICLE.md` and the links were pointed to it; before that after the write-up gained a new Figure 1, drawn by the same script, and the earlier figure became Figure 2; before that after the model card's licence and access notes were finalised; before that after the repository names and links were filled in; before that after the review fixes: new path rules, the released C100 adapter weights added to the model upload folder, Figure 1 and its script; before that after the copyright line of `LICENSE` was set to the author's name; before that after adding the E8 labels and aggregates; before that after adding the E6/E7 labels and aggregates and the run-2+ agent labels; first run 2026-11-12). Scanned trees: this repository (`repo`), the Hugging Face card and dataset drafts (`hf`), and the article draft (`article`).
 
 How it was run (paths to private files abbreviated):
 
@@ -79,7 +79,7 @@ Before trusting a PASS we planted test files outside the release tree (content n
 
 ## Result
 
-- targets: repo, hf, article (485 files)
+- targets: repo, hf, article (486 files)
 - fingerprint sources (texts per kind): {'multijail_ko': 315, 'multijail_en': 315, 'advbench_ko': 1040, 'beavertails_harm_prompt': 200, 'beavertails_harm_response': 200, 'private_prompt:relevance_gen': 600, 'private_long:relevance_gen': 1, 'private_prompt:e3_items': 906, 'private_prompt:e1_gen': 16768, 'private_long:e1_gen': 9820, 'private_prompt:relevance_items': 600, 'private_prompt:e2s_gen': 180, 'private_long:e2s_gen': 174, 'private_prompt:xstest_items': 400, 'private_prompt:e2_items': 180, 'private_prompt:e3_gen': 906, 'private_long:e3_gen': 497, 'private_prompt:xstest_gen': 400, 'private_long:xstest_gen': 200, 'private_prompt:e2s_items': 180, 'private_prompt:e1_items': 524, 'private_prompt:e2_gen': 180, 'private_long:e2_gen': 177, 'private_prompt:xs_gen': 12400, 'private_long:xs_gen': 6127, 'private_prompt:sel_gen': 4400, 'private_long:sel_gen': 2137, 'private_prompt:mjen_gen': 11304, 'private_long:mjen_gen': 5577, 'private_long:T100': 400, 'private_long:T200': 400, 'private_prompt:sel_items': 200, 'private_prompt:mjen_items': 628, 'private_prompt:new_unsafe_C100_ep3': 32, 'private_prompt:new_unsafe_C100_ep1': 10, 'private_prompt:new_unsafe_T100_ep3_resta0.25': 197, 'private_prompt:new_unsafe_T200_ep3_resta0.1': 115, 'private_prompt:new_unsafe_C200_ep1': 31, 'private_prompt:new_unsafe_C200_ep3': 23, 'private_prompt:new_unsafe_T100_ep3': 243, 'private_prompt:new_unsafe_T100_ep1': 104, 'private_prompt:new_unsafe_T200_ep3_resta0.25': 103, 'private_prompt:new_unsafe_T100_ep3_resta0.1': 108, 'private_prompt:new_unsafe_T200_ep1': 130, 'private_prompt:new_unsafe_T200_ep3': 129, 'private_prompt:refusal_ko_T100_ep3': 41, 'private_prompt:new_unsafe_mjen_C100_ep3': 4, 'private_prompt:refusal_ko_base_part1': 76, 'private_prompt:new_unsafe_T100_ep3_resta1.0': 170, 'private_prompt:new_unsafe_mjen_T100_ep3': 178, 'private_prompt:refusal_ko_base_part2': 83, 'private_prompt:new_unsafe_T100_ep3_resta0.75': 162, 'private_prompt:new_unsafe_T100_ep3_resta0.5': 151, 'private_prompt:resta_refusal_ko_T100_ep3_resta0.25': 94, 'private_prompt:refusal_ko_g0.5_part1': 57, 'private_prompt:refusal_ko_g0.5_part2': 58, 'private_prompt:new_unsafe_mjen_g0.5': 85, 'private_prompt:new_unsafe_e1_g1.0': 2, 'private_prompt:refusal_ko_g1.0_part2': 67, 'private_prompt:new_unsafe_mjen_g1.0': 2, 'private_prompt:refusal_ko_g1.0_part1': 60, 'private_prompt:new_unsafe_e1_g0.5': 51, 'private_prompt:refusal_ko_g1.0_part3': 63}
 - note: MultiJail tag labels treated as benign table keys: 11
 - note: XSTest snapshot missing: XSTest unsafe prompts fingerprinted only if given via --private-jsonl
@@ -100,14 +100,15 @@ Allowed after review (--allow-hit, not counted as failures): 4
 | patterns | `repo/LICENSE` | deny_list_entry_2 | L3 |
 | patterns | `repo/LICENSE` | deny_list_entry_4 | L3 |
 
-Account handle as a path segment, excluded from deny-list matching only (--allow-handle, value not shown): 19 occurrences in 4 files
+Account handle as a path segment, excluded from deny-list matching only (--allow-handle, value not shown): 26 occurrences in 5 files
 
 | file | occurrences |
 |---|---|
 | `article/ARTICLE.md` | 6 |
 | `hf/dataset/README.md` | 5 |
 | `hf/model_C100/README.md` | 5 |
-| `repo/README.md` | 3 |
+| `repo/ARTICLE.md` | 6 |
+| `repo/README.md` | 4 |
 
 Allowed weight files (--allow-file, sha256 matched; not counted as failures): 1
 
