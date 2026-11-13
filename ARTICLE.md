@@ -46,6 +46,10 @@ Teams that ship a Korean assistant usually fine-tune an open multilingual model 
 
 Why these choices: Tiny Aya Global is a small open multilingual instruct model that fine-tunes on one GPU. MultiJail gives the same 315 harmful requests in Korean as well as English, so drift and repair can be paired item by item across languages. XSTest's harmless-but-alarming prompts measure what a safety repair costs in over-refusal, and Global-MMLU-ko checks that Korean task ability survives.
 
+![Study design: the damaged model, the original model and the benign fine-tune, the safety vector added to each, and what was measured.](figures/overview_study_design.png)
+
+*Study design.* The damaged model (T100) and the benign fine-tune (C100) differ only in 100 training rows: harmful in T100, benign and length-matched in C100. The paper-style safety vector (repair B in the table) is built from the original model, as in the ReSta paper, and is added to all three models.
+
 | component | choice |
 |---|---|
 | model | `CohereLabs/tiny-aya-global` (instruct, 3.35B) |
@@ -199,6 +203,10 @@ The difference was not the environment: on the 200-item selection set, both base
 
 ## 9. A pre-release check for Korean fine-tunes and weight-space repairs
 
+![Six steps to run before releasing a Korean fine-tune or a weight-space repair, each with what it caught in this study.](figures/overview_prerelease_check.png)
+
+*The six steps below, with what each caught in this study.* Step 3 is the one that changed our conclusion.
+
 1. **Train a matched benign control** next to your fine-tune. On one A40 each arm took about 34 minutes; it tells you which part of a drop is yours.
 2. **Measure refusal on a fixed Korean set with paired tests**, next to MMLU. MultiJail-ko plus a judge took about 7 minutes per model; a 40-point safety loss was invisible on MMLU-ko.
 3. **Apply your repair to undamaged models as well**: the original model and a benign fine-tune made the same way. If refusals rise there by the same share, what you have is a refusal dial. In our case this cost one extra evaluation per strength (about 9 minutes).
@@ -209,6 +217,10 @@ The difference was not the environment: on the 200-item selection set, both base
 Compute: run 2 (two trainings, seven models) took 126.5 orchestrated GPU minutes on one A40; Repair B 24.3 minutes; the base-model control 48.3 minutes; the C100 control 39.3 minutes. Rented-GPU cost was about $1.6, $0.6, $0.6 and $0.5 respectively (estimated from the hourly price, not from invoices).
 
 ## 10. Artifacts
+
+![What is released where: code, id manifests and aggregates on GitHub, labels and the benign control adapter on the Hugging Face Hub, and the two ways to reproduce.](figures/overview_release_map.png)
+
+*What is released, and how the numbers are re-derived.* Reproduce A in the repository README recomputes the run-2 and later numbers from the released labels on a CPU; Reproduce B rebuilds the run-2 inputs by id from public datasets and reruns run 2 on one GPU.
 
 - Released: the **benign control adapter C100** ([kyungmin-cho/tiny-aya-global-ko-benign-control-lora](https://huggingface.co/kyungmin-cho/tiny-aya-global-ko-benign-control-lora), CC-BY-NC-4.0, not a safer model; public and not gated, but loading it needs the base model, which is gated: accept Cohere Labs' terms for Tiny Aya Global on the Hub first) and a **label dataset**, no text ([kyungmin-cho/tiny-aya-global-ko-refusal-drift-labels](https://huggingface.co/datasets/kyungmin-cho/tiny-aya-global-ko-refusal-drift-labels)): judge labels, MMLU predictions and generation lengths for every model in this write-up (run 1, run 2, Repair B, the base and C100 controls and the bf16 merged file), the agent read-through labels of run 1, run 2 and Repair B (`gpt-6.1-sol`, plus a second agent's cross-check of run-1 C100; id and label only, no reasons), id manifests and training logs.
 - Code (MIT), id manifests, the aggregates of every experiment and the script for Figures 1 and 2 (`tools/make_figure.py`): [github.com/kyungmin-cho/tiny-aya-ko-refusal-drift](https://github.com/kyungmin-cho/tiny-aya-ko-refusal-drift). All run-2 and later judge and MMLU numbers in §3–7 and all run-2 and later read-through counts re-derive from the released labels: `RESULTS.md` is generated from them, and `experiments/e6/scripts/e6_from_labels.py`, `experiments/e7/scripts/e7_from_labels.py` and `experiments/e8/scripts/e8_from_labels.py` recompute the Repair B, base-control, C100-control and read-through numbers and compare them with the shipped aggregates (1,470, 1,744 and 3,008 values, all equal on our run). Run-1 numbers are read from the run-1 aggregates (its judge and read-through labels are in the dataset as well). Numbers that need the answers or the weights are shipped as aggregates only: output shape (Hangul share, identical answers), the vector statistics in §5, the rounding and re-training checks in §6–8, and the character-identical answer counts. The CPU weight diagnosis in §4 needs unreleased weights (the T100 adapter and the Repair A merge) and is reported here only.
